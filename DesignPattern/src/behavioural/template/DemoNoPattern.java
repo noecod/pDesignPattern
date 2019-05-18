@@ -20,7 +20,7 @@ public class DemoNoPattern {
         System.out.println("- big explosion");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
@@ -36,7 +36,7 @@ public class DemoNoPattern {
         System.out.println("- lights go out");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
@@ -51,7 +51,7 @@ public class DemoNoPattern {
         System.out.println("- group follows to the lake shore");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
@@ -63,7 +63,7 @@ public class DemoNoPattern {
         System.out.println("to be written");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
@@ -75,7 +75,7 @@ public class DemoNoPattern {
         System.out.println("to be written");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
         sceneNo++;
 
@@ -86,19 +86,7 @@ public class DemoNoPattern {
         System.out.println("to be written");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
-        System.out.println("+-----------------+");
-
-        sceneNo++;
-
-        System.out.println("+-------------------+");
-        System.out.println("| Start scene " + sceneNo + " ... |");
-        System.out.println("+-------------------+");
-
-        System.out.println("to be written");
-
-        System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
@@ -110,7 +98,7 @@ public class DemoNoPattern {
         System.out.println("to be written");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
@@ -122,20 +110,20 @@ public class DemoNoPattern {
         System.out.println("to be written");
 
         System.out.println("+-----------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+-----------------+");
 
         sceneNo++;
 
-        System.out.println("+--------------------+");
+        System.out.println("+-------------------+");
         System.out.println("| Start scene " + sceneNo + " ... |");
-        System.out.println("+--------------------+");
+        System.out.println("+-------------------+");
 
         System.out.println("to be written");
 
-        System.out.println("+------------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
-        System.out.println("+------------------+");
+        System.out.println("+-----------------+");
+        System.out.println("| End scene " + sceneNo + " ... |");
+        System.out.println("+-----------------+");
 
         sceneNo++;
 
@@ -146,7 +134,19 @@ public class DemoNoPattern {
         System.out.println("to be written");
 
         System.out.println("+------------------+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
+        System.out.println("+------------------+");
+
+        sceneNo++;
+
+        System.out.println("+--------------------+");
+        System.out.println("| Start scene " + sceneNo + " ... |");
+        System.out.println("+--------------------+");
+
+        System.out.println("to be written");
+
+        System.out.println("+------------------+");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+------------------+");
     }
 }

@@ -15,23 +15,17 @@ public abstract class StartDoEndTemplate {
 
     private void startScene(int sceneNo) {
         int lengthDivider = NUM_OF_MINUS_START_SCENE + String.valueOf(sceneNo).length();
-        printDivider(lengthDivider);
-        System.out.println("| Start scene " + sceneNo + " ... |");
-        printDivider(lengthDivider);
+        printBetweenDivider("| Start scene " + sceneNo + " ... |", lengthDivider);
     }
 
     private void endScene(int sceneNo) {
         int lengthDivider = NUM_OF_MINUS_END_SCENE + String.valueOf(sceneNo).length();
-        printDivider(lengthDivider);
-        System.out.println("+ End scene " + sceneNo + " ... |");
-        printDivider(lengthDivider);
+        printBetweenDivider("| End scene " + sceneNo + " ... |", lengthDivider);
     }
 
-    private String repeatedMinus(int num) {
-        return new String(new char[num]).replace('\0', '-');
-    }
-    
-    private void printDivider(int num) {
-        System.out.println("+" + this.repeatedMinus(num) + "+");
+    private void printBetweenDivider(String text, int num) {
+        System.out.println("+" + "-".repeat(num) + "+");
+        System.out.println(text);
+        System.out.println("+" + "-".repeat(num) + "+");
     }
 }

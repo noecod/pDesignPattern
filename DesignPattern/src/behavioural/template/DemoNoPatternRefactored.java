@@ -22,7 +22,7 @@ public class DemoNoPatternRefactored {
     private void endScene(int sceneNo) {
         int lengthDivider = NUM_OF_MINUS_END_SCENE + String.valueOf(sceneNo).length();
         System.out.println("+" + this.repeatedMinus(lengthDivider) + "+");
-        System.out.println("+ End scene " + sceneNo + " ... |");
+        System.out.println("| End scene " + sceneNo + " ... |");
         System.out.println("+" + this.repeatedMinus(lengthDivider) + "+");
     }
 
