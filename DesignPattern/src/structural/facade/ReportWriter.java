@@ -1,4 +1,4 @@
-package structural.todo_facade;
+package structural.facade;
 
 import structural.todo_facade.report.Report;
 

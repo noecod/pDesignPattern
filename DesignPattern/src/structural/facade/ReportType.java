@@ -1,4 +1,4 @@
-package structural.todo_facade;
+package structural.facade;
 
 public enum ReportType {
     PDF, HTML

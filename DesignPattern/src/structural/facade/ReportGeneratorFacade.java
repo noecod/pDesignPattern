@@ -1,4 +1,4 @@
-package structural.todo_facade;
+package structural.facade;
 
 import java.time.LocalDate;
 
