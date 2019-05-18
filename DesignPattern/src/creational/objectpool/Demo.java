@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class ObjectPoolTest {
+public class Demo {
 
     private ObjectPool<ExportingProcess> pool;
     private AtomicLong processNo = new AtomicLong(0);
@@ -57,7 +57,7 @@ public class ObjectPoolTest {
     }
     
     public static void main(String[] args) {
-        ObjectPoolTest runDemo = new ObjectPoolTest();
+        Demo runDemo = new Demo();
         runDemo.setUp();
         runDemo.testObjectPool();
         runDemo.tearDown();

@@ -4,7 +4,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.IntStream;
 
 public abstract class ObjectPool<T> {
 
@@ -17,6 +16,7 @@ public abstract class ObjectPool<T> {
      * @param minIdle Minimum number of objects residing in the pool.
      */
     public ObjectPool(final int minIdle) {
+        
         // initialize pool
         initialize(minIdle);
     }
@@ -32,6 +32,7 @@ public abstract class ObjectPool<T> {
      *                           will be removed.
      */
     public ObjectPool(final int minIdle, final int maxIdle, final long validationInterval) {
+        
         // initialize pool
         initialize(minIdle);
 
@@ -43,11 +44,15 @@ public abstract class ObjectPool<T> {
             public void run() {
                 int size = pool.size();
                 if (size < minIdle) {
-                    // fill up to minimum
-                    IntStream.of(minIdle - size).forEach(i -> pool.add(createObject()));
+                    int sizeToBeAdded = minIdle - size;
+                    for (int i = 0; i < sizeToBeAdded; i++) {
+                        pool.add(createObject());
+                    }
                 } else if (size > maxIdle) {
-                    // remove excessive objects
-                    IntStream.of(size - maxIdle).forEach(i -> pool.poll());
+                    int sizeToBeRemoved = size - maxIdle;
+                    for (int i = 0; i < sizeToBeRemoved; i++) {
+                        pool.poll();
+                    }
                 }
             }
         }, validationInterval, validationInterval, TimeUnit.SECONDS);
@@ -96,6 +101,8 @@ public abstract class ObjectPool<T> {
 
     private void initialize(final int minIdle) {
         pool = new ConcurrentLinkedQueue<>();
-        IntStream.of(minIdle).forEach(i -> pool.add(createObject()));
+        for (int i = 0; i < minIdle; i++) {
+            pool.add(createObject());
+        }
     }
 }
