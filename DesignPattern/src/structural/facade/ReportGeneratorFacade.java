@@ -2,10 +2,11 @@ package structural.facade;
 
 import java.time.LocalDate;
 
-import structural.todo_facade.report.Report;
-import structural.todo_facade.report.ReportData;
-import structural.todo_facade.report.ReportFooter;
-import structural.todo_facade.report.ReportHeader;
+import structural.facade.report.Report;
+import structural.facade.report.ReportData;
+import structural.facade.report.ReportFooter;
+import structural.facade.report.ReportHeader;
+import structural.facade.writer.ReportWriterFactory;
 
 public class ReportGeneratorFacade {
 
@@ -14,7 +15,7 @@ public class ReportGeneratorFacade {
             // throw some exception
             System.out.println("Exception: invalid input");
         }
-        
+
         // Create report
         Report report = new Report();
 
@@ -24,15 +25,6 @@ public class ReportGeneratorFacade {
         report.setData(new ReportData(dataSource.getText()));
 
         // Write report
-        ReportWriter writer = new ReportWriter();
-        switch (type) {
-        case HTML:
-            writer.writeHtmlReport(report, location);
-            break;
-
-        case PDF:
-            writer.writePdfReport(report, location);
-            break;
-        }
+        ReportWriterFactory.getReportWriter(type).write(report, location);
     }
 }

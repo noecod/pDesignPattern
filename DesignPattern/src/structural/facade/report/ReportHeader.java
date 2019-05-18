@@ -1,16 +1,13 @@
-package structural.todo_facade.report;
-
-import java.time.LocalDate;
+package structural.facade.report;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class DataSource {
+public class ReportHeader {
+
     private String mainTitle;
     private String subTitle;
     private String author;
-    
-    private String text;
 }

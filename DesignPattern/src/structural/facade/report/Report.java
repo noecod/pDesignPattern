@@ -1,4 +1,4 @@
-package structural.todo_facade.report;
+package structural.facade.report;
 
 import lombok.Getter;
 
