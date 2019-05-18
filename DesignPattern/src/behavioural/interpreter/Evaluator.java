@@ -3,6 +3,10 @@ package behavioural.interpreter;
 import java.util.Map;
 import java.util.Stack;
 
+import behavioural.interpreter.expr.Minus;
+import behavioural.interpreter.expr.Plus;
+import behavioural.interpreter.expr.Variable;
+
 public class Evaluator implements IExpression {
 
     private IExpression syntaxTree;

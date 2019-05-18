@@ -1,16 +1,15 @@
-package behavioural.interpreter;
+package behavioural.interpreter.expr;
 
 import java.util.Map;
 
+import behavioural.interpreter.IExpression;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class Minus implements IExpression {
 
     IExpression leftOperand;
     IExpression rightOperand;
-
-    public Minus(final IExpression left, final IExpression right) {
-        this.leftOperand = left;
-        this.rightOperand = right;
-    }
 
     @Override
     public int interpret(final Map<String, IExpression> variables) {

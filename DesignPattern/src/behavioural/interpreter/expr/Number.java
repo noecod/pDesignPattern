@@ -1,14 +1,14 @@
-package behavioural.interpreter;
+package behavioural.interpreter.expr;
 
 import java.util.Map;
 
+import behavioural.interpreter.IExpression;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class Number implements IExpression {
 
     private int number;
-
-    public Number(final int number) {
-        this.number = number;
-    }
 
     @Override
     public int interpret(final Map<String, IExpression> variables) {

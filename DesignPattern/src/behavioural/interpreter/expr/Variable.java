@@ -1,14 +1,14 @@
-package behavioural.interpreter;
+package behavioural.interpreter.expr;
 
 import java.util.Map;
 
+import behavioural.interpreter.IExpression;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class Variable implements IExpression {
 
     private String name;
-
-    public Variable(final String name) {
-        this.name = name;
-    }
 
     @Override
     public int interpret(final Map<String, IExpression> variables) {

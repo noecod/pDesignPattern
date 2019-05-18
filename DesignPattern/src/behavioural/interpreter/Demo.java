@@ -3,6 +3,8 @@ package behavioural.interpreter;
 import java.util.HashMap;
 import java.util.Map;
 
+import behavioural.interpreter.expr.Number;
+
 public class Demo {
 
     public static void main(final String[] args) {
