@@ -1,6 +1,6 @@
 package pattern.gof.structural.bridge.api;
 
-import pattern.gof.structural.bridge.IDrawingAPI;
+import structural.bridge.IDrawingAPI;
 
 /**
  * Concrete implementor for Windows systems.

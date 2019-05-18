@@ -1,4 +1,4 @@
-package pattern.gof.structural.bridge;
+package structural.bridge;
 
 import java.util.ArrayList;
 import java.util.List;

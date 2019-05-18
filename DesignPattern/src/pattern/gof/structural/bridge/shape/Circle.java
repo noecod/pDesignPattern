@@ -1,7 +1,7 @@
 package pattern.gof.structural.bridge.shape;
 
-import pattern.gof.structural.bridge.IDrawingAPI;
-import pattern.gof.structural.bridge.IShape;
+import structural.bridge.IDrawingAPI;
+import structural.bridge.IShape;
 
 public class Circle implements IShape {
 

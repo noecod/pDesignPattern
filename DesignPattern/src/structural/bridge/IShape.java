@@ -1,4 +1,4 @@
-package pattern.gof.structural.bridge;
+package structural.bridge;
 
 public interface IShape {
 

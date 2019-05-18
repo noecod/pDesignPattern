@@ -1,4 +1,4 @@
-package pattern.gof.structural.adapter.before;
+package structural.adapter.after;
 
 class LegacyRectangle {
 
