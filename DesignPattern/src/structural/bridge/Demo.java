@@ -3,10 +3,10 @@ package structural.bridge;
 import java.util.ArrayList;
 import java.util.List;
 
-import pattern.gof.structural.bridge.api.LinuxDrawingAPI;
-import pattern.gof.structural.bridge.api.WindowsDrawingAPI;
-import pattern.gof.structural.bridge.shape.Circle;
-import pattern.gof.structural.bridge.shape.Rectangle;
+import structural.bridge.api.LinuxDrawingAPI;
+import structural.bridge.api.WindowsDrawingAPI;
+import structural.bridge.shape.Circle;
+import structural.bridge.shape.Rectangle;
 
 public class Demo {
 
