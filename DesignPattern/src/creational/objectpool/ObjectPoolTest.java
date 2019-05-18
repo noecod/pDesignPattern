@@ -5,28 +5,22 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 public class ObjectPoolTest {
 
     private ObjectPool<ExportingProcess> pool;
-
     private AtomicLong processNo = new AtomicLong(0);
 
-    @Before
     public void setUp() {
 
         // Creates a pool of objects of type ExportingProcess. Parameters:
         // 1) Minimum number of special ExportingProcess instances residing in the pool = 4
         // 2) Maximum number of special ExportingProcess instances residing in the pool = 10
-        // 3) Time in seconds for periodical checking of minIdle / maxIdle conditions in a separate thread = 5.
+        // 3) Time in seconds for periodical checking of minIdle / maxIdle conditions in a separate thread = 5''.
         //
         // When the number of ExportingProcess instances is less than minIdle, missing instances will be created.
-        // When the number of ExportingProcess instances is greater than maxIdle, too many instances will be removed.
+        // When the number of ExportingProcess instances is greater than maxIdle, excessive instances will be removed.
         // If the validation interval is negative, no periodical checking of minIdle / maxIdle conditions
-        // in a separate thread take place. These boundaries are ignored then.
+        // in a separate thread will take place.
         pool = new ObjectPool<>(4, 10, 5) {
 
             @Override
@@ -37,12 +31,10 @@ public class ObjectPoolTest {
         };
     }
 
-    @After
     public void tearDown() {
         pool.shutdown();
     }
 
-    @Test
     public void testObjectPool() {
         ExecutorService executor = Executors.newFixedThreadPool(8);
 
@@ -63,5 +55,11 @@ public class ObjectPoolTest {
             e.printStackTrace();
         }
     }
-
+    
+    public static void main(String[] args) {
+        ObjectPoolTest runDemo = new ObjectPoolTest();
+        runDemo.setUp();
+        runDemo.testObjectPool();
+        runDemo.tearDown();
+    }
 }

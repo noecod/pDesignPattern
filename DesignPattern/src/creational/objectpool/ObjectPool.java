@@ -4,6 +4,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.IntStream;
 
 public abstract class ObjectPool<T> {
 
@@ -13,7 +14,7 @@ public abstract class ObjectPool<T> {
     /**
      * Creates the pool.
      *
-     * @param minIdle minimum number of objects residing in the pool
+     * @param minIdle Minimum number of objects residing in the pool.
      */
     public ObjectPool(final int minIdle) {
         // initialize pool
@@ -23,12 +24,12 @@ public abstract class ObjectPool<T> {
     /**
      * Creates the pool.
      *
-     * @param minIdle            minimum number of objects residing in the pool
-     * @param maxIdle            maximum number of objects residing in the pool
-     * @param validationInterval time in seconds for periodical checking of minIdle / maxIdle conditions in a separate
-     *                               thread. When the number of objects is less than minIdle, missing instances will be
-     *                               created. When the number of objects is greater than maxIdle, too many instances
-     *                               will be removed.
+     * @param minIdle            Minimum number of objects residing in the pool
+     * @param maxIdle            Maximum number of objects residing in the pool
+     * @param validationInterval Time in seconds for periodical checking of minIdle / maxIdle conditions in a separate
+     *                           thread. When the number of objects is less than minIdle, missing instances will be
+     *                           created. When the number of objects is greater than maxIdle, too many instances
+     *                           will be removed.
      */
     public ObjectPool(final int minIdle, final int maxIdle, final long validationInterval) {
         // initialize pool
@@ -42,15 +43,11 @@ public abstract class ObjectPool<T> {
             public void run() {
                 int size = pool.size();
                 if (size < minIdle) {
-                    int sizeToBeAdded = minIdle - size;
-                    for (int i = 0; i < sizeToBeAdded; i++) {
-                        pool.add(createObject());
-                    }
+                    // fill up to minimum
+                    IntStream.of(minIdle - size).forEach(i -> pool.add(createObject()));
                 } else if (size > maxIdle) {
-                    int sizeToBeRemoved = size - maxIdle;
-                    for (int i = 0; i < sizeToBeRemoved; i++) {
-                        pool.poll();
-                    }
+                    // remove excessive objects
+                    IntStream.of(size - maxIdle).forEach(i -> pool.poll());
                 }
             }
         }, validationInterval, validationInterval, TimeUnit.SECONDS);
@@ -58,16 +55,15 @@ public abstract class ObjectPool<T> {
 
     /**
      * Gets the next free object from the pool. If the pool doesn't contain any objects, a new object will be created
-     * and given to the caller of this method back.
+     * and returned.
      *
      * @return T borrowed object
      */
     public T borrowObject() {
-        T object;
-        if ((object = pool.poll()) == null) {
+        T object = pool.poll();
+        if (object == null) {
             object = createObject();
         }
-
         return object;
     }
 
@@ -77,11 +73,9 @@ public abstract class ObjectPool<T> {
      * @param object object to be returned
      */
     public void returnObject(T object) {
-        if (object == null) {
-            return;
+        if (object != null) {
+            pool.offer(object);
         }
-
-        this.pool.offer(object);
     }
 
     /**
@@ -102,9 +96,6 @@ public abstract class ObjectPool<T> {
 
     private void initialize(final int minIdle) {
         pool = new ConcurrentLinkedQueue<>();
-
-        for (int i = 0; i < minIdle; i++) {
-            pool.add(createObject());
-        }
+        IntStream.of(minIdle).forEach(i -> pool.add(createObject()));
     }
 }
