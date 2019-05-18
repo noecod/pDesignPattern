@@ -1,4 +1,4 @@
-package creational.todo_objectpool;
+package creational.objectpool;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executors;

@@ -1,5 +1,8 @@
-package creational.todo_objectpool;
+package creational.objectpool;
 
+import lombok.Getter;
+
+@Getter
 public class ExportingProcess {
 
     private String location;
@@ -17,13 +20,5 @@ public class ExportingProcess {
         }
 
         System.out.println("Object with process no. " + processNo + " was created");
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public long getProcessNo() {
-        return processNo;
     }
 }

@@ -1,14 +1,12 @@
-package creational.todo_objectpool;
+package creational.objectpool;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class ExportingTask implements Runnable {
 
     private ObjectPool<ExportingProcess> pool;
     private int threadNo;
-
-    public ExportingTask(ObjectPool<ExportingProcess> pool, int threadNo) {
-        this.pool = pool;
-        this.threadNo = threadNo;
-    }
 
     @Override
     public void run() {
