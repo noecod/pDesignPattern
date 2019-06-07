@@ -2,6 +2,7 @@ package behavioural.visitor;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -16,6 +17,6 @@ public class Cart implements IVisitable {
     @Override
     public void accept(ICartVisitor visitor) {
         visitor.visit(this);
-        items.stream().forEach(ci -> ci.accept(visitor));
+        items.forEach(ci -> ci.accept(visitor));
     }
 }
