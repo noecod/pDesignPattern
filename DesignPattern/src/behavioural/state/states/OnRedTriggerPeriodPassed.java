@@ -7,7 +7,7 @@ public class OnRedTriggerPeriodPassed implements IState {
 
     @Override
     public void pushShort(HeadLamp hl) {
-        hl.setState(new OffRed());
+        hl.setState(new Off());
     }
 
     @Override

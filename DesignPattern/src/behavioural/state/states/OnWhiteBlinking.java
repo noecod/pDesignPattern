@@ -7,7 +7,7 @@ public class OnWhiteBlinking implements IState {
 
     @Override
     public void pushShort(HeadLamp hl) {
-        hl.setState(new OffWhite());
+        hl.setState(new Off());
     }
 
     @Override

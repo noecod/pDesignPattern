@@ -1,13 +1,13 @@
 package behavioural.state;
 
-import behavioural.state.states.OffWhite;
+import behavioural.state.states.Off;
 
 public class HeadLamp {
 
     private IState currentState;
 
     public HeadLamp() {
-        this.currentState = new OffWhite();
+        this.currentState = new Off();
     }
 
     public void setState(IState state) {
