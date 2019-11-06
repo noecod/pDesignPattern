@@ -7,12 +7,12 @@ public class Off implements IState {
 
     @Override
     public void pushShort(HeadLamp hl) {
-        hl.setState(new OnWhiteFull());
+        hl.setState(new WhiteFull());
     }
 
     @Override
     public void pushLong(HeadLamp hl) {
-        hl.setState(new OnRed());
+        hl.setState(new Red());
     }
 
     @Override

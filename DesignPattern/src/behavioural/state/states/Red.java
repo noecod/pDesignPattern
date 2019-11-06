@@ -3,24 +3,25 @@ package behavioural.state.states;
 import behavioural.state.HeadLamp;
 import behavioural.state.IState;
 
-public class OnRedBlinking implements IState {
+public class Red implements IState {
 
     @Override
     public void pushShort(HeadLamp hl) {
-        hl.setState(new Off());
+        hl.setState(new RedBlinking());
     }
 
     @Override
     public void pushLong(HeadLamp hl) {
-        hl.setState(new OnWhiteFull());
+        hl.setState(new WhiteFull());
     }
 
     @Override
     public void triggerPeriodPassed(HeadLamp hl) {
+        hl.setState(new RedTriggerPeriodPassed());
     }
 
     @Override
     public void action() {
-        System.out.println("--Red blinking beam!");
+        System.out.println("--Full red beam!");
     }
 }

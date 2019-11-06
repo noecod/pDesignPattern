@@ -3,7 +3,7 @@ package behavioural.state.states;
 import behavioural.state.HeadLamp;
 import behavioural.state.IState;
 
-public class OnRedTriggerPeriodPassed implements IState {
+public class RedTriggerPeriodPassed implements IState {
 
     @Override
     public void pushShort(HeadLamp hl) {
@@ -12,7 +12,7 @@ public class OnRedTriggerPeriodPassed implements IState {
 
     @Override
     public void pushLong(HeadLamp hl) {
-        hl.setState(new OnWhiteFull());
+        hl.setState(new WhiteFull());
     }
 
     @Override
