@@ -10,6 +10,8 @@ public class TextEventHandler extends AbstractHandler {
         if (request instanceof TextEvent) {
             TextEvent textEvent = (TextEvent) request;
             System.out.println("TextEventHandler.processRequest: " + textEvent.getPayLoad().toUpperCase());
+        } else {
+            System.out.println(this.getClass().getSimpleName() + " doesn't process " + request.getClass().getSimpleName());
         }
     }
 }
