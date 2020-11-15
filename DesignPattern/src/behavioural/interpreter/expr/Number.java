@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Number implements IExpression {
 
-    private int number;
+    private final int number;
 
     @Override
     public int interpret(final Map<String, IExpression> variables) {

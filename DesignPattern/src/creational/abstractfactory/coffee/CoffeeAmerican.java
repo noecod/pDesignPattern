@@ -1,8 +1,8 @@
-package creational.abstractfactory;
+package creational.abstractfactory.coffee;
 
 public class CoffeeAmerican extends AbstractCoffee {
 
-    CoffeeAmerican(String name, double price) {
+    public CoffeeAmerican(String name, double price) {
         super(name, price);
     }
 

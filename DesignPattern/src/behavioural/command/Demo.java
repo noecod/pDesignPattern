@@ -9,8 +9,7 @@ import behavioural.command.cmd.TurnOnLightCommand;
 public class Demo {
 
     private static final int ITERATIONS = 20;
-
-    private static Random random = new Random();
+    private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
         ReceiverLight light = new ReceiverLight();
@@ -18,7 +17,7 @@ public class Demo {
         InvokerSwitch lightSwitch = new InvokerSwitch();
 
         for (int i = 0; i < ITERATIONS; i++) {
-            int randomNumber = random.nextInt(3);
+            int randomNumber = RANDOM.nextInt(3);
 
             switch (randomNumber) {
             case 0:
@@ -28,7 +27,7 @@ public class Demo {
                 lightSwitch.execute(new TurnOffLightCommand(light));
                 break;
             case 2:
-                lightSwitch.execute(new DimLightCommand(light, random.nextInt(100)));
+                lightSwitch.execute(new DimLightCommand(light, RANDOM.nextInt(100)));
                 break;
             default: // do nothing
             }

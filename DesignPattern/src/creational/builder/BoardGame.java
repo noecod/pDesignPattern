@@ -4,13 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public class BoardGame {
 
-    private @Getter Board board;
-    private @Setter @Getter String figures;
-    private @Setter @Getter String instructions;
-    private @Setter @Getter String packaging;
-    private @Setter @Getter boolean wrapping = false;
+    private Board board;
+
+    @Setter
+    private String figures;
+    @Setter
+    private String instructions;
+    @Setter
+    private String packaging;
+    @Setter
+    private boolean wrapping = false;
 
     public void createBoard(String name, int numOfFields) {
         board = new Board(name, numOfFields);

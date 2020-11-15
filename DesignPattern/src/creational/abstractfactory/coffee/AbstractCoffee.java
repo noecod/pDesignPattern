@@ -1,11 +1,11 @@
-package creational.abstractfactory;
+package creational.abstractfactory.coffee;
 
-public abstract class AbstractPizza {
+public abstract class AbstractCoffee {
 
     private String name;
     private double price;
 
-    AbstractPizza(String name, double price) {
+    public AbstractCoffee(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -26,5 +26,5 @@ public abstract class AbstractPizza {
         this.price = price;
     }
 
-    public abstract void cookIt();
+    public abstract void brewIt();
 }

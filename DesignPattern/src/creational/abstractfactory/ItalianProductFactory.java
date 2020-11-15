@@ -1,5 +1,11 @@
 package creational.abstractfactory;
 
+import creational.abstractfactory.coffee.AbstractCoffee;
+import creational.abstractfactory.coffee.CoffeeItalian;
+import creational.abstractfactory.pizza.AbstractPizza;
+import creational.abstractfactory.pizza.NapoliItalian;
+import creational.abstractfactory.pizza.QuattroStagioniItalian;
+
 public class ItalianProductFactory extends AbstractProductFactory {
 
     @Override

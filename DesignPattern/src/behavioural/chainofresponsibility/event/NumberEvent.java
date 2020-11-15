@@ -2,7 +2,7 @@ package behavioural.chainofresponsibility.event;
 
 public class NumberEvent implements IEvent<Integer> {
 
-    private Integer number;
+    private final Integer number;
 
     public NumberEvent(Integer number) {
         this.number = number;

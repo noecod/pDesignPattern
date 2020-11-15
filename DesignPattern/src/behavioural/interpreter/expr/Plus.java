@@ -8,8 +8,8 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Plus implements IExpression {
 
-    IExpression leftOperand;
-    IExpression rightOperand;
+    private final IExpression leftOperand;
+    private final IExpression rightOperand;
 
     @Override
     public int interpret(final Map<String, IExpression> variables) {

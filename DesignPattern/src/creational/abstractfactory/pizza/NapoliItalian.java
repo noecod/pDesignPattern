@@ -1,8 +1,10 @@
-package creational.abstractfactory;
+package creational.abstractfactory.pizza;
+
+import creational.abstractfactory.pizza.AbstractPizza;
 
 public class NapoliItalian extends AbstractPizza {
 
-    NapoliItalian(String name, double price) {
+    public NapoliItalian(String name, double price) {
         super(name, price);
     }
 

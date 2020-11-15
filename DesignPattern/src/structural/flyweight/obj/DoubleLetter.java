@@ -6,9 +6,11 @@ public class DoubleLetter {
 
     private static final char DEFAULT_LETTER = 'A';
 
-    private @Getter static int countNumObjects = 0;
+    @Getter
+    private static int countNumObjects = 0;
 
-    private @Getter char letter = DEFAULT_LETTER;
+    @Getter
+    private char letter = DEFAULT_LETTER;
 
     public DoubleLetter(char letter) {
         int asciiCode = letter;

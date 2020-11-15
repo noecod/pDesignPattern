@@ -2,7 +2,7 @@ package behavioural.chainofresponsibility.event;
 
 public class StarEvent implements IEvent<String> {
 
-    private Integer count;
+    private final Integer count;
 
     public StarEvent(Integer input) {
         this.count= input;

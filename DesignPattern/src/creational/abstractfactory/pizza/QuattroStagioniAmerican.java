@@ -1,8 +1,10 @@
-package creational.abstractfactory;
+package creational.abstractfactory.pizza;
+
+import creational.abstractfactory.pizza.AbstractPizza;
 
 public class QuattroStagioniAmerican extends AbstractPizza {
 
-    QuattroStagioniAmerican(String name, double price) {
+    public QuattroStagioniAmerican(String name, double price) {
         super(name, price);
     }
 

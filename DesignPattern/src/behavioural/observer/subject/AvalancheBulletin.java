@@ -7,7 +7,7 @@ import behavioural.observer.IInformationSet;
 
 public class AvalancheBulletin extends AbstractObservable {
 
-    private static Random random = new Random();
+    private static final Random RANDOM = new Random();
 
     private static String[] dangerScale = { "low", "moderate", "considerable", "high", "very high" };
 
@@ -24,7 +24,7 @@ public class AvalancheBulletin extends AbstractObservable {
         return new IInformationSet() {
 
             // random danger scale
-            private String text = dangerScale[random.nextInt(dangerScale.length)];
+            private String text = dangerScale[RANDOM.nextInt(dangerScale.length)];
 
             @Override
             public String getType() {

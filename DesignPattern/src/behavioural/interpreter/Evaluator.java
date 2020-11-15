@@ -9,7 +9,7 @@ import behavioural.interpreter.expr.Variable;
 
 public class Evaluator implements IExpression {
 
-    private IExpression syntaxTree;
+    private final IExpression syntaxTree;
 
     public Evaluator(final String expression) {
         final Stack<IExpression> expressionStack = new Stack<>();

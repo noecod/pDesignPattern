@@ -7,10 +7,9 @@ import structural.flyweight.obj.DoubleLetter;
 public class Demo {
 
     public static final int ROWS = 15, COLS = 35;
+    private static final Random RANDOM = new Random();
 
     private static DoubleLetter[][] matrix;
-
-    private static Random random = new Random();
 
     public static void main(String[] args) {
         matrix = new DoubleLetter[ROWS][COLS];
@@ -39,6 +38,6 @@ public class Demo {
 
     private static int getRandomNumber() {
         // generate a random integer ascii code from A to Z
-        return random.nextInt(26) + 65;
+        return RANDOM.nextInt(26) + 65;
     }
 }
