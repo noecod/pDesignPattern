@@ -1,13 +1,16 @@
-package behavioural.observer;
+package behavioural.observer.subject;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import behavioural.observer.IInformationSet;
+import behavioural.observer.IObserver;
 import lombok.Getter;
 
 public abstract class AbstractObservable {
 
-    private @Getter String name;
+    @Getter
+    private final String name;
     private Map<String, IObserver> observers = new HashMap<>();
 
     public AbstractObservable(String name) {
@@ -21,14 +24,12 @@ public abstract class AbstractObservable {
     }
 
     public void unsubscribe(IObserver observer) {
-        if (observers.containsKey(observer.getIdentifier())) {
-            observers.remove(observer.getIdentifier());
-        }
+        observers.remove(observer.getIdentifier());
     }
 
-    protected abstract IInformationSet getNewInformationSet();
+    public abstract IInformationSet getNewInformationSet();
 
-    protected void publishUpdatedInformationSet() {
+    public void publishUpdatedInformationSet() {
         // notify all subscribers
         observers.values().forEach(o -> o.update(getNewInformationSet()));
     }

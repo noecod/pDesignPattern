@@ -3,6 +3,7 @@ package behavioural.observer;
 import java.util.ArrayList;
 import java.util.List;
 
+import behavioural.observer.subject.AbstractObservable;
 import behavioural.observer.subject.AvalancheBulletin;
 import behavioural.observer.subject.WeatherForecast;
 import behavioural.observer.subscriber.Hiker;
@@ -26,16 +27,16 @@ public class Demo {
         observables.add(weatherZermatt);
     }
 
-    public static void main(String[] args) {
-        Demo runDemo = new Demo();
-        runDemo.initObjects();
-        runDemo.observables.forEach(o -> o.publishUpdatedInformationSet());
-    }
-
     private void initObjects() {
         bulletinCH.subscribe(ueli);
         weatherZermatt.subscribe(ueli);
         weatherZermatt.subscribe(tom);
         weatherZermatt.subscribe(anna);
+    }
+
+    public static void main(String[] args) {
+        Demo runDemo = new Demo();
+        runDemo.initObjects();
+        runDemo.observables.forEach(o -> o.publishUpdatedInformationSet());
     }
 }

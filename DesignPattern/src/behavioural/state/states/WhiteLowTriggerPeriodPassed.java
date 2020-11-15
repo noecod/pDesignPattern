@@ -1,7 +1,6 @@
 package behavioural.state.states;
 
 import behavioural.state.HeadLamp;
-import behavioural.state.IState;
 
 public class WhiteLowTriggerPeriodPassed implements IState {
 

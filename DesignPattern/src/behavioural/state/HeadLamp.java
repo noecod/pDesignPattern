@@ -1,5 +1,6 @@
 package behavioural.state;
 
+import behavioural.state.states.IState;
 import behavioural.state.states.Off;
 
 public class HeadLamp {

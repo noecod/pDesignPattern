@@ -3,7 +3,6 @@ package behavioural.observer.subject;
 import java.time.LocalDateTime;
 import java.util.Random;
 
-import behavioural.observer.AbstractObservable;
 import behavioural.observer.IInformationSet;
 
 public class AvalancheBulletin extends AbstractObservable {

@@ -19,7 +19,6 @@ public class Demo {
         textHandler.setNext(numberHandler);
         numberHandler.setNext(starHandler);
 
-
         // calling chain of responsibility
         root.handle(new NumberEvent(1287));
         root.handle(new TextEvent("get up!"));

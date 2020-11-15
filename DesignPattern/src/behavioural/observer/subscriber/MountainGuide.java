@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public class MountainGuide extends AbstractObserver {
 
-    private String qualification;
+    private final String qualification;
 
     public MountainGuide(String firstName, String sureName, String eMail, String qualification) {
         super(firstName, sureName, eMail);

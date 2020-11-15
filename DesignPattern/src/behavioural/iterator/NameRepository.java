@@ -28,10 +28,7 @@ public class NameRepository implements IContainer {
 
         @Override
         public boolean hasNext() {
-            if (index < localListCopy.length) {
-                return true;
-            }
-            return false;
+            return index < localListCopy.length;
         }
 
         @Override

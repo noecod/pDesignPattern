@@ -9,9 +9,9 @@ import lombok.Getter;
 @AllArgsConstructor
 public abstract class AbstractObserver implements IObserver {
 
-    private String firstName;
-    private String sureName;
-    private String eMail;
+    private final String firstName;
+    private final String sureName;
+    private final String eMail;
 
     @Override
     public String getIdentifier() {

@@ -18,9 +18,9 @@ public class Evaluator implements IExpression {
                 final IExpression subExpression = new Plus(expressionStack.pop(), expressionStack.pop());
                 expressionStack.push(subExpression);
             } else if (token.equals("-")) {
-                // it's necessary remove first the right operand from the stack
+                // it's necessary to remove first the right operand from the stack
                 final IExpression right = expressionStack.pop();
-                // ..and after the left one
+                // ..and then the left one
                 final IExpression left = expressionStack.pop();
                 final IExpression subExpression = new Minus(left, right);
                 expressionStack.push(subExpression);
