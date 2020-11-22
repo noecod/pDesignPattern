@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 public class Demo {
 
-    private String clientName;
+    private final String clientName;
 
     public void run() {
         // 3. The client deals with the wrapper

@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class Article {
 
-    private final long id; // not changable
+    private final long id; // not changeable
     private String title;
     private String content;
 

@@ -12,8 +12,9 @@ public class Variable implements IExpression {
 
     @Override
     public int interpret(final Map<String, IExpression> variables) {
-        if (variables.get(this.name) == null)
-            return 0; // Either return new Number(0).
+        if (variables.get(this.name) == null) {
+            return 0;
+        }
         return variables.get(this.name).interpret(variables);
     }
 }

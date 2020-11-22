@@ -2,7 +2,7 @@ package creational.builder;
 
 public class ChessBuilder extends AbstractBoardGameBuilder {
 
-    private BoardGame product = new BoardGame();
+    private final BoardGame product = new BoardGame();
 
     @Override
     public void buildBoard() {

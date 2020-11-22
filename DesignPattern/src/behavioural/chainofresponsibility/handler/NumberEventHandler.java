@@ -17,7 +17,7 @@ public class NumberEventHandler extends AbstractHandler {
         }
     }
 
-    // checks whether an natural number is prime or not.
+    // checks whether a natural number is prime or not.
     private boolean isPrime(int n) {
         // check if n is a multiple of 2
         if (n % 2 == 0) {

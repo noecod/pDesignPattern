@@ -26,7 +26,7 @@ public class BoardGame {
     @AllArgsConstructor
     public class Board {
 
-        private String name;
-        private int numOfFields;
+        private final String name;
+        private final int numOfFields;
     }
 }

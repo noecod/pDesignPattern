@@ -10,13 +10,10 @@ public class ReportWriterFactory {
     }
 
     public static IReportWriter getReportWriter(ReportType type) {
-        switch (type) {
-        case HTML:
-            return new ReportWriterHTML();
-        case TEXT:
-            return new ReportWriterText();
-        default:
-            return null;
-        }
+        return switch (type) {
+            case HTML -> new ReportWriterHTML();
+            case TEXT -> new ReportWriterText();
+            default -> null;
+        };
     }
 }
