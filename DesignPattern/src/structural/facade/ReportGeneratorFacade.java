@@ -20,9 +20,9 @@ public class ReportGeneratorFacade {
         Report report = new Report();
 
         // Get data from dataSource and set to ReportData object
-        report.setHeader(new ReportHeader(dataSource.getMainTitle(), dataSource.getSubTitle(), dataSource.getAuthor()));
+        report.setHeader(new ReportHeader(dataSource.mainTitle(), dataSource.subTitle(), dataSource.author()));
         report.setFooter(new ReportFooter(LocalDate.now(), "#No#Total"));
-        report.setData(new ReportData(dataSource.getText()));
+        report.setData(new ReportData(dataSource.text()));
 
         // Write report
         ReportWriterFactory.getReportWriter(type).write(report, location);

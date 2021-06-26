@@ -1,13 +1,5 @@
 package structural.facade.report;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public record ReportHeader(String mainTitle, String subTitle, String author) {
 
-@Data
-@AllArgsConstructor
-public class ReportHeader {
-
-    private String mainTitle;
-    private String subTitle;
-    private String author;
 }

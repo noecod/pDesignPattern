@@ -49,7 +49,7 @@ public class Demo {
         }
 
         public void constructPresent(BoardGameBuilder builder) {
-            this.constructPlain(builder);
+            constructPlain(builder);
             builder.wrapping();
         }
     }
@@ -77,32 +77,32 @@ public class Demo {
 
         @Override
         public void buildBoard() {
-            this.product.board = new Board("8x8 Board", 16);
+            product.board = new Board("8x8 Board", 16);
         }
 
         @Override
         public void buildFigures() {
-            this.product.figures = "16 black & 16 white figures";
+            product.figures = "16 black & 16 white figures";
         }
 
         @Override
         public void buildInstructions() {
-            this.product.instructions = "Introduction to Chess";
+            product.instructions = "Introduction to Chess";
         }
 
         @Override
         public void buildPackaging() {
-            this.product.packaging = "Wooden Box";
+            product.packaging = "Wooden Box";
         }
 
         @Override
         public void wrapping() {
-            this.product.wrapping = true;
+            product.wrapping = true;
         }
 
         @Override
         public BoardGame getGame() {
-            return this.product;
+            return product;
         }
     }
 
@@ -112,32 +112,32 @@ public class Demo {
 
         @Override
         public void buildBoard() {
-            this.product.board = new Board("15x15 Board", 225);
+            product.board = new Board("15x15 Board", 225);
         }
 
         @Override
         public void buildFigures() {
-            this.product.figures = "many letters";
+            product.figures = "many letters";
         }
 
         @Override
         public void buildInstructions() {
-            this.product.instructions = "Introduction to Scrabble";
+            product.instructions = "Introduction to Scrabble";
         }
 
         @Override
         public void buildPackaging() {
-            this.product.packaging = "Cardboard Box";
+            product.packaging = "Cardboard Box";
         }
 
         @Override
         public void wrapping() {
-            this.product.wrapping = true;
+            product.wrapping = true;
         }
 
         @Override
         public BoardGame getGame() {
-            return this.product;
+            return product;
         }
     }
 

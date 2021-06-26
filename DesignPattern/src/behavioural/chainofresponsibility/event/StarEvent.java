@@ -1,13 +1,8 @@
 package behavioural.chainofresponsibility.event;
 
-public class StarEvent implements IEvent<String> {
+public record StarEvent(Integer count) implements IEvent<String> {
 
-    private final Integer count;
-
-    public StarEvent(Integer input) {
-        this.count= input;
-    }
-
+    @Override
     public String getPayLoad() {
         return "*".repeat(count);
     }

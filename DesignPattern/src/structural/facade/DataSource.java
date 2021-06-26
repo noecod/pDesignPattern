@@ -1,14 +1,5 @@
 package structural.facade;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public record DataSource(String mainTitle, String subTitle, String author, String text) {
 
-@Data
-@AllArgsConstructor
-public class DataSource {
-    private String mainTitle;
-    private String subTitle;
-    private String author;
-    
-    private String text;
 }

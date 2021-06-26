@@ -4,9 +4,6 @@ import java.util.List;
 
 import behavioural.strategy.IStrategy;
 
-/**
- *
- */
 public abstract class AbstractStrategySolution<T> implements IStrategy<T> {
 
     // Template Method.

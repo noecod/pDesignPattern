@@ -24,7 +24,7 @@ public class AvalancheBulletin extends AbstractObservable {
         return new IInformationSet() {
 
             // random danger scale
-            private String text = dangerScale[RANDOM.nextInt(dangerScale.length)];
+            private final String text = dangerScale[RANDOM.nextInt(dangerScale.length)];
 
             @Override
             public String getType() {

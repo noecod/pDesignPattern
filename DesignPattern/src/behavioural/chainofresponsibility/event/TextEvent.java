@@ -1,13 +1,8 @@
 package behavioural.chainofresponsibility.event;
 
-public class TextEvent implements IEvent<String> {
+public record TextEvent(String text) implements IEvent<String> {
 
-    private final String text;
-
-    public TextEvent(String text) {
-        this.text = text;
-    }
-
+    @Override
     public String getPayLoad() {
         return text;
     }

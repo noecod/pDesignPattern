@@ -1,12 +1,7 @@
 package structural.decorator.gui;
 
-import lombok.AllArgsConstructor;
-
 // 3. "Core" class with "is a" relationship
-@AllArgsConstructor
-public class TextField implements IWidget {
-
-    private int width, height;
+public record TextField(int width, int height) implements IWidget {
 
     @Override
     public void draw() {

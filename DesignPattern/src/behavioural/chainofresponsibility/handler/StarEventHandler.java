@@ -8,12 +8,11 @@ public class StarEventHandler extends AbstractHandler {
 
     @Override
     protected void processRequest(IEvent<?> request) {
-        if (request instanceof StarEvent) {
-            StarEvent starEvent = (StarEvent) request;
+        if (request instanceof StarEvent starEvent) {
             String stars = starEvent.getPayLoad();
             System.out.println("StarEventHandler.processRequest: " + stars);
         } else {
-            System.out.println(this.getClass().getSimpleName() + " doesn't process " + request.getClass().getSimpleName());
+            System.out.println(getClass().getSimpleName() + " doesn't process " + request.getClass().getSimpleName());
         }
     }
 }

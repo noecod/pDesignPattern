@@ -2,13 +2,6 @@ package structural.facade.report;
 
 import java.time.LocalDate;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public record ReportFooter(LocalDate date, String pageNumberLayout) {
 
-@Data
-@AllArgsConstructor
-public class ReportFooter {
-
-    private LocalDate Date;
-    private String pageNumberLayout;
 }

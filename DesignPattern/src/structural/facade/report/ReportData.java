@@ -1,11 +1,5 @@
 package structural.facade.report;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public record ReportData(String text) {
 
-@Data
-@AllArgsConstructor
-public class ReportData {
-
-    private String text;
 }

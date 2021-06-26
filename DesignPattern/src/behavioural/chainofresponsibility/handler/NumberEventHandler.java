@@ -7,13 +7,12 @@ public class NumberEventHandler extends AbstractHandler {
 
     @Override
     protected void processRequest(IEvent<?> request) {
-        if (request instanceof NumberEvent) {
-            NumberEvent numberEvent = (NumberEvent) request;
+        if (request instanceof NumberEvent numberEvent) {
             int n = numberEvent.getPayLoad();
             System.out
                 .println("NumberEventHandler.processRequest: " + n + " is " + (isPrime(n) ? "" : "not ") + "prime");
         } else {
-            System.out.println(this.getClass().getSimpleName() + " doesn't process " + request.getClass().getSimpleName());
+            System.out.println(getClass().getSimpleName() + " doesn't process " + request.getClass().getSimpleName());
         }
     }
 

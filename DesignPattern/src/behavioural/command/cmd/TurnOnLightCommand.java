@@ -7,7 +7,7 @@ public class TurnOnLightCommand implements ICommand {
 
     private static final String COMMAND_NAME = "TURN ON";
 
-    private ReceiverLight theLight;
+    private final ReceiverLight theLight;
 
     public TurnOnLightCommand(ReceiverLight light) {
         theLight = light;

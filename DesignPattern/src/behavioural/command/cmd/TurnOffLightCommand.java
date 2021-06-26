@@ -7,7 +7,7 @@ public class TurnOffLightCommand implements ICommand {
 
     private static final String COMMAND_NAME = "TURN OFF";
 
-    private ReceiverLight theLight;
+    private final ReceiverLight theLight;
 
     public TurnOffLightCommand(ReceiverLight light) {
         theLight = light;

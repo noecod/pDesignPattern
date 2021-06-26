@@ -27,11 +27,11 @@ public class Evaluator implements IExpression {
             } else
                 expressionStack.push(new Variable(token));
         }
-        this.syntaxTree = expressionStack.pop();
+        syntaxTree = expressionStack.pop();
     }
 
     @Override
     public int interpret(final Map<String, IExpression> context) {
-        return this.syntaxTree.interpret(context);
+        return syntaxTree.interpret(context);
     }
 }

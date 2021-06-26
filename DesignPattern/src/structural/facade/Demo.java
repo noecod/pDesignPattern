@@ -13,7 +13,7 @@ public class Demo {
 
     private static DataSource generateDataSource() {
         Random random = new Random();
-        List<DataSource> data = new ArrayList<DataSource>();
+        List<DataSource> data = new ArrayList<>();
         data.add(new DataSource("Anna Karenina", "", "Leo Tolstoi", "Die Rache ist mein. Ich will vergelten."));
         data.add(new DataSource("Glück", "", "Matthieu Richard", "Das Glück fällt uns nicht einfach so in den Schoss"));
         data.add(new DataSource("Siddhartha", "", "Hermann Hesse", "Im Schatten des Hauses, in der Sonne des Flussufers"

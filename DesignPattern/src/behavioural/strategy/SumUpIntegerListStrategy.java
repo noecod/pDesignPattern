@@ -4,7 +4,7 @@ import java.util.List;
 
 import behavioural.strategy.base.AbstractStrategySolution;
 
-class SumUpIntegerListStrategie extends AbstractStrategySolution<Integer> {
+class SumUpIntegerListStrategy extends AbstractStrategySolution<Integer> {
 
     private Integer result;
 

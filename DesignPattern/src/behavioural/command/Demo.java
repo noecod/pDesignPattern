@@ -20,16 +20,16 @@ public class Demo {
             int randomNumber = RANDOM.nextInt(3);
 
             switch (randomNumber) {
-            case 0:
-                lightSwitch.execute(new TurnOnLightCommand(light));
-                break;
-            case 1:
-                lightSwitch.execute(new TurnOffLightCommand(light));
-                break;
-            case 2:
-                lightSwitch.execute(new DimLightCommand(light, RANDOM.nextInt(100)));
-                break;
-            default: // do nothing
+                case 0:
+                    lightSwitch.execute(new TurnOnLightCommand(light));
+                    break;
+                case 1:
+                    lightSwitch.execute(new TurnOffLightCommand(light));
+                    break;
+                case 2:
+                    lightSwitch.execute(new DimLightCommand(light, RANDOM.nextInt(100)));
+                    break;
+                default: // do nothing
             }
         }
 

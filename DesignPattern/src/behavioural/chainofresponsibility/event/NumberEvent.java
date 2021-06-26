@@ -1,13 +1,8 @@
 package behavioural.chainofresponsibility.event;
 
-public class NumberEvent implements IEvent<Integer> {
+public record NumberEvent(Integer number) implements IEvent<Integer> {
 
-    private final Integer number;
-
-    public NumberEvent(Integer number) {
-        this.number = number;
-    }
-
+    @Override
     public Integer getPayLoad() {
         return number;
     }

@@ -15,7 +15,7 @@ public class Employees implements Cloneable {
     }
 
     public Employees(List<String> list) {
-        this.empList = list;
+        empList = list;
     }
 
     public void loadData() {
@@ -31,7 +31,7 @@ public class Employees implements Cloneable {
      */
     @Override
     public Object clone() throws CloneNotSupportedException {
-        List<String> temp = new ArrayList<>(this.getEmpList());
+        List<String> temp = new ArrayList<>(getEmpList());
         return new Employees(temp);
     }
 }

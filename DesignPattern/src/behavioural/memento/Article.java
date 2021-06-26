@@ -17,18 +17,17 @@ public class Article {
     }
 
     public ArticleMemento createMemento() {
-        ArticleMemento memento = new ArticleMemento(id, title, content);
-        return memento;
+        return new ArticleMemento(id, title, content);
     }
 
     public void restore(ArticleMemento memento) {
-        if (getId() == memento.getId()) {
-            title = memento.getTitle();
-            content = memento.getContent();
+        if (getId() == memento.id()) {
+            title = memento.title();
+            content = memento.content();
         } else {
             // throw an exception
             System.out.println(
-                "can't restore over article with different id. This id: " + getId() + ", Memento: " + memento.getId());
+                    "can't restore over article with different id. This id: " + getId() + ", Memento: " + memento.id());
         }
     }
 
