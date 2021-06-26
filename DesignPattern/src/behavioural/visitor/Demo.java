@@ -29,8 +29,8 @@ public class Demo {
         ICartVisitor visitor = new ShoppingListVisitor();
         cart.accept(visitor);
 
-        CountNoOfItemsVisitor noofitemvisitor = new CountNoOfItemsVisitor();
-        cart.accept(noofitemvisitor);
-        System.out.println("Total sum: "+ noofitemvisitor.getSum());
+        CountNoOfItemsVisitor noOfItemsVisitor = new CountNoOfItemsVisitor();
+        cart.accept(noOfItemsVisitor);
+        System.out.println("Total sum: "+ noOfItemsVisitor.getSum());
     }
 }

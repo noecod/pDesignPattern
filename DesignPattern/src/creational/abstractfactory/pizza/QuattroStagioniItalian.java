@@ -1,7 +1,5 @@
 package creational.abstractfactory.pizza;
 
-import creational.abstractfactory.pizza.AbstractPizza;
-
 public class QuattroStagioniItalian extends AbstractPizza {
 
     public QuattroStagioniItalian(String name, double price) {
@@ -10,6 +8,6 @@ public class QuattroStagioniItalian extends AbstractPizza {
 
     @Override
     public final void cookIt() {
-        System.out.println("add funghis, tomatoes, anchovis, mozarella, prociutto, oives, ... and cook in oven");
+        System.out.println("add funghis, tomatoes, anchovis, mozzarella, prosciutto, olives, ... and cook in oven");
     }
 }

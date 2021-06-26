@@ -1,7 +1,5 @@
 package creational.abstractfactory.pizza;
 
-import creational.abstractfactory.pizza.AbstractPizza;
-
 public class NapoliAmerican extends AbstractPizza {
 
     public NapoliAmerican(String name, double price) {
@@ -10,6 +8,6 @@ public class NapoliAmerican extends AbstractPizza {
 
     @Override
     public final void cookIt() {
-        System.out.println("add tomatoes, mozarella, prociutto, oives, ... and cook in electric oven");
+        System.out.println("add tomatoes, mozzarella, prosciutto, olives, ... and cook in electric oven");
     }
 }

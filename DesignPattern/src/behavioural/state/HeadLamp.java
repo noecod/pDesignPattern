@@ -2,35 +2,38 @@ package behavioural.state;
 
 import behavioural.state.states.IState;
 import behavioural.state.states.Off;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class HeadLamp {
 
-    private IState currentState;
+    private IState state;
 
     public HeadLamp() {
-        this.currentState = new Off();
-    }
-
-    public void setState(IState state) {
-        this.currentState = state;
+        state = new Off();
     }
 
     public void pushShort() {
         System.out.println("push short");
-        this.currentState.pushShort(this);
+        state.pushShort(this);
+        state.action();
     }
 
     public void pushLong() {
         System.out.println("push long");
-        this.currentState.pushLong(this);
+        state.pushLong(this);
+        state.action();
     }
 
     public void triggerPeriodPassed() {
         System.out.println("trigger period passed");
-        this.currentState.triggerPeriodPassed(this);
+        state.triggerPeriodPassed(this);
+        state.action();
     }
 
-    public void action() {
-        this.currentState.action();
+    public void printState(String prefixText) {
+        System.out.println(prefixText + getState().getClass().getSimpleName());
     }
 }
