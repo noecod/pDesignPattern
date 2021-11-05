@@ -10,10 +10,7 @@ public class Demo {
 
     public static void example1() {
         Lazy<Integer, Boolean> lazyEven = Lazy.of(i -> {
-            System.out.println("simple but long lasting calculation");
-            for (int j = 0; j < 1_000_000; j++) {
-                // do nothing
-            }
+            System.out.println("calculating ...");
             return i % 2 == 0;
         });
 

@@ -20,14 +20,13 @@ public class Lazy<I, R> {
     }
 
     public R apply(I input) {
-        R result;
         if (cache.containsKey(input)) {
-            result = cache.get(input);
+            return cache.get(input);
         } else {
-            result = function.apply(input);
+            R result = function.apply(input);
             cache.put(input, result);
+            return result;
         }
-        return result;
     }
 
     public static <I, R> Lazy<I, R> of(Function<I, R> function) {
