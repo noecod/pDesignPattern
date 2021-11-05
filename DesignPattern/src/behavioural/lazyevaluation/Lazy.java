@@ -2,30 +2,35 @@ package behavioural.lazyevaluation;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Supplier;
+import java.util.function.Function;
 
-import lombok.Setter;
+/**
+ * Lazy evaluation implemented in Java.
+ *
+ * @param <I> input type
+ * @param <R> result type
+ */
+public class Lazy<I, R> {
 
-public class Lazy<T, R> {
+    private final Function<I, R> function;
+    private Map<I, R> cache = new HashMap<>();
 
-    private final Supplier<R> supplier;
-    private Map<T, R> cache = new HashMap<>();
-
-    @Setter
-    private T input;
-
-    public Lazy(Supplier<R> suppl) {
-        supplier = suppl;
+    private Lazy(Function<I, R> funct) {
+        function = funct;
     }
 
-    public R get() {
-        R result;
-        if (cache.containsKey(input)) {
-            result = cache.get(input);
+    public R apply(I inp) {
+        R res;
+        if (cache.containsKey(inp)) {
+            res = cache.get(inp);
         } else {
-            result = supplier.get();
-            cache.put(input, result);
+            res = function.apply(inp);
+            cache.put(inp, res);
         }
-        return result;
+        return res;
+    }
+
+    public static <I, R> Lazy<I, R> of(Function<I, R> function) {
+        return new Lazy<>(function);
     }
 }
