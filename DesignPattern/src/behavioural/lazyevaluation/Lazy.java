@@ -15,19 +15,19 @@ public class Lazy<I, R> {
     private final Function<I, R> function;
     private Map<I, R> cache = new HashMap<>();
 
-    private Lazy(Function<I, R> funct) {
-        function = funct;
+    private Lazy(Function<I, R> f) {
+        function = f;
     }
 
-    public R apply(I inp) {
-        R res;
-        if (cache.containsKey(inp)) {
-            res = cache.get(inp);
+    public R apply(I input) {
+        R result;
+        if (cache.containsKey(input)) {
+            result = cache.get(input);
         } else {
-            res = function.apply(inp);
-            cache.put(inp, res);
+            result = function.apply(input);
+            cache.put(input, result);
         }
-        return res;
+        return result;
     }
 
     public static <I, R> Lazy<I, R> of(Function<I, R> function) {
