@@ -4,7 +4,7 @@
 *A collection of design patterns written in _Java_. See https://en.wikipedia.org/wiki/Design_Patterns["Gang of Four Design Patterns"].*
 
 == Behavioural Patterns
-.Contains the following well known patterns:
+.*Contains the following well known patterns:*
 * chain of responsibility
 * command
 * interpreter
@@ -18,7 +18,7 @@
 * visitor
 
 == Creational Patterns
-.Contains the following well known patterns:
+.*Contains the following well known patterns:*
 * factories
 * builder
 * object pool
@@ -26,7 +26,7 @@
 * singleton
 
 == Structural Patterns
-.Contains the following well known patterns:
+.*Contains the following well known patterns:*
 * adapter
 * bridge
 * composite
