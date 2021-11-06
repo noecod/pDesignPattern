@@ -1,4 +1,4 @@
-package behavioural.lazyevaluation;
+package structural.lazyevaluation;
 
 public class Demo {
 

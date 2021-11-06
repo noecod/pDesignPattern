@@ -1,5 +1,8 @@
-package behavioural.lazyevaluation;
+package structural.lazyevaluation;
 
+/**
+ * Represents a complex and time-consuming calculation.
+ */
 public class ComplexCalculation {
 
     private static final Lazy<Input, Long> lazyCompute = Lazy.of(i -> {
