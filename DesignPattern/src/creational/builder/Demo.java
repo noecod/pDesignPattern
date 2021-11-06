@@ -22,8 +22,8 @@ public class Demo {
         d.constructPresent(scrabbleB);
         bg[3] = scrabbleB.getGame();
 
-        for (int i = 0; i < bg.length; i++) {
-            printG(bg[i]);
+        for (BoardGame boardGame : bg) {
+            printG(boardGame);
         }
     }
 
