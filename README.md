@@ -1,8 +1,8 @@
 # Design Pattern
 A collection of design patterns written in java. See "Gang of Four Design Patterns".
 
-## Behavioural Pattern
-Contains the following well known pattern:
+## Behavioural Patterns
+Contains the following well known patterns:
 * chain of responsibility
 * command
 * interpreter
@@ -15,16 +15,16 @@ Contains the following well known pattern:
 * template
 * visitor
 
-## Creational Pattern
-Contains the following well known pattern:
+## Creational Patterns
+Contains the following well known patterns:
 * factories
 * builder
 * object pool
 * prototype
 * singleton
 
-## Structural Pattern
-Contains the following well known pattern:
+## Structural Patterns
+Contains the following well known patterns:
 * adapter
 * bridge
 * composite
