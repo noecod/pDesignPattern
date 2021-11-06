@@ -1,4 +1,4 @@
-= Design Pattern
+= Design Patterns
 
 [abstract]
 *A collection of design patterns written in _Java_. See https://en.wikipedia.org/wiki/Design_Patterns["Gang of Four Design Patterns"].*
