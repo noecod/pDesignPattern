@@ -1,7 +1,7 @@
 = Design Pattern
 
 [abstract]
-*A collection of design patterns written in java. See "Gang of Four Design Patterns".*
+*A collection of design patterns written in _Java_. See https://en.wikipedia.org/wiki/Design_Patterns["Gang of Four Design Patterns"].*
 
 == Behavioural Patterns
 .Contains the following well known patterns:
