@@ -18,6 +18,7 @@
 * visitor
 
 == Creational Patterns
+giberish
 .*Contains the following well known patterns:*
 * factories
 * builder
