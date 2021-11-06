@@ -1,6 +1,6 @@
 package structural.composite;
 
-public class LeafComponent extends AbstractComponent {
+public final class LeafComponent extends AbstractComponent {
 
     public LeafComponent(String name) {
         super(name);

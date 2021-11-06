@@ -1,4 +1,4 @@
-package behavioural.lazyevaluation;
+package structural.lazyevaluation;
 
 import java.util.HashMap;
 import java.util.Map;
