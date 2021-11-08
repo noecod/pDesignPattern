@@ -33,5 +33,5 @@
 * decorator
 * facade
 * flyweight
-* lazy evaluation
+* memoized evaluation
 * proxy
