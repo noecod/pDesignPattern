@@ -1,5 +1,4 @@
 package structural.facade.report;
 
-public record ReportData(String text) {
-
-}
+// @formatter:off
+public record ReportData(String text) {}
