@@ -1,4 +1,4 @@
-package structural.lazyevaluation;
+package structural.memoizedevaluation;
 
 public class Demo {
 
@@ -9,16 +9,16 @@ public class Demo {
     }
 
     public static void example1() {
-        Lazy<Integer, Boolean> lazyEven = Lazy.of(i -> {
+        Memoizer<Integer, Boolean> memoEven = Memoizer.of(i -> {
             System.out.println("calculating ...");
             return i % 2 == 0;
         });
 
-        show1(4, lazyEven.apply(4));
-        show1(5, lazyEven.apply(5));
-        show1(19, lazyEven.apply(19));
-        show1(5, lazyEven.apply(5));
-        show1(19, lazyEven.apply(19));
+        show1(4, memoEven.apply(4));
+        show1(5, memoEven.apply(5));
+        show1(19, memoEven.apply(19));
+        show1(5, memoEven.apply(5));
+        show1(19, memoEven.apply(19));
     }
 
     public static void show1(int num, boolean result) {

@@ -1,21 +1,21 @@
-package structural.lazyevaluation;
+package structural.memoizedevaluation;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
 /**
- * Lazy evaluation implemented in Java.
+ * Memoization evaluation implemented in Java.
  *
  * @param <I> input type
  * @param <R> result type
  */
-public class Lazy<I, R> {
+public class Memoizer<I, R> {
 
     private final Function<I, R> function;
     private Map<I, R> cache = new HashMap<>();
 
-    private Lazy(Function<I, R> f) {
+    private Memoizer(Function<I, R> f) {
         function = f;
     }
 
@@ -29,7 +29,7 @@ public class Lazy<I, R> {
         }
     }
 
-    public static <I, R> Lazy<I, R> of(Function<I, R> function) {
-        return new Lazy<>(function);
+    public static <I, R> Memoizer<I, R> of(Function<I, R> function) {
+        return new Memoizer<>(function);
     }
 }

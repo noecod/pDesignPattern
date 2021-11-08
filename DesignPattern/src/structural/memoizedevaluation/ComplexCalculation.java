@@ -1,11 +1,11 @@
-package structural.lazyevaluation;
+package structural.memoizedevaluation;
 
 /**
  * Represents a complex and time-consuming calculation.
  */
 public class ComplexCalculation {
 
-    private static final Lazy<Input, Long> lazyCompute = Lazy.of(i -> {
+    private static final Memoizer<Input, Long> lazyCompute = Memoizer.of(i -> {
         System.out.println("calculating ...");
         return i.x + i.y;
     });
