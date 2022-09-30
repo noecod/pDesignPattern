@@ -20,13 +20,7 @@ public class Memoizer<I, R> {
     }
 
     public R apply(I input) {
-        if (cache.containsKey(input)) {
-            return cache.get(input);
-        } else {
-            R result = function.apply(input);
-            cache.put(input, result);
-            return result;
-        }
+       return cache.computeIfAbsent(input, function);
     }
 
     public static <I, R> Memoizer<I, R> of(Function<I, R> function) {

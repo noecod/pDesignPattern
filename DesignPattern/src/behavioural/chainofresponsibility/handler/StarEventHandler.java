@@ -1,7 +1,6 @@
 package behavioural.chainofresponsibility.handler;
 
 import behavioural.chainofresponsibility.event.IEvent;
-import behavioural.chainofresponsibility.event.NumberEvent;
 import behavioural.chainofresponsibility.event.StarEvent;
 
 public class StarEventHandler extends AbstractHandler {

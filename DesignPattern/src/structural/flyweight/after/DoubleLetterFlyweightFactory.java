@@ -15,12 +15,6 @@ public class DoubleLetterFlyweightFactory {
 
     public DoubleLetter getFlyweight(char letter) {
         String key = String.valueOf(letter);
-        if (pool.containsKey(key)) {
-            return pool.get(key);
-        } else {
-            DoubleLetter newDoubleLetter = new DoubleLetter(letter);
-            pool.put(key, newDoubleLetter);
-            return newDoubleLetter;
-        }
+        return pool.computeIfAbsent(key, k -> new DoubleLetter(letter));
     }
 }

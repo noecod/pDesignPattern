@@ -18,9 +18,7 @@ public abstract class AbstractObservable {
     }
 
     public void subscribe(IObserver observer) {
-        if (!observers.containsKey(observer.getIdentifier())) {
-            observers.put(observer.getIdentifier(), observer);
-        }
+        observers.putIfAbsent(observer.getIdentifier(), observer);
     }
 
     public void unsubscribe(IObserver observer) {

@@ -3,7 +3,6 @@ package behavioural.interpreter.expr;
 import java.util.Map;
 
 import behavioural.interpreter.IExpression;
-import lombok.AllArgsConstructor;
 
 public record Plus(IExpression leftOperand, IExpression rightOperand) implements IExpression {
 
