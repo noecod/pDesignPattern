@@ -13,7 +13,7 @@ public class Demo {
 
     public void run() {
         // 3. The client deals with the wrapper
-        ISocket socket = new SocketProxy("127.0.0.1", 8080, getClientName().equals("first") ? true : false);
+        ISocket socket = new SocketProxy("127.0.0.1", 8080, getClientName().equals("first"));
         String str;
         boolean skip = true;
         while (true) {

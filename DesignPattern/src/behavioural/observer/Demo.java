@@ -12,14 +12,14 @@ import behavioural.observer.subscriber.OutdoorGuide;
 
 public class Demo {
 
-    private AvalancheBulletin bulletinCH = new AvalancheBulletin("Avalanche Bulletin for CH");
-    private WeatherForecast weatherGotthard = new WeatherForecast("Weather Forecast for Gotthard region");
-    private WeatherForecast weatherZermatt = new WeatherForecast("Weather Forecast for Zermatt region");
-    private List<AbstractObservable> observables = new ArrayList<>();
+    AvalancheBulletin bulletinCH = new AvalancheBulletin("Avalanche Bulletin for CH");
+    WeatherForecast weatherGotthard = new WeatherForecast("Weather Forecast for Gotthard region");
+    WeatherForecast weatherZermatt = new WeatherForecast("Weather Forecast for Zermatt region");
+    List<AbstractObservable> observables = new ArrayList<>();
 
-    private Hiker tom = new Hiker("Tom", "Muller", "tom.muller@hiker.org");
-    private MountainGuide ueli = new MountainGuide("Ueli", "Stock", "ueli.stock@berge.ch", "Alpiniste");
-    private OutdoorGuide anna = new OutdoorGuide("Anna", "Bell", "anna.bell@action.fi");
+    Hiker tom = new Hiker("Tom", "Muller", "tom.muller@hiker.org");
+    MountainGuide ueli = new MountainGuide("Ueli", "Stock", "ueli.stock@berge.ch", "Alpiniste");
+    OutdoorGuide anna = new OutdoorGuide("Anna", "Bell", "anna.bell@action.fi");
 
     public Demo() {
         observables.add(bulletinCH);

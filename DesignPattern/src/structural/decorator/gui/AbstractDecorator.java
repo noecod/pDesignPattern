@@ -4,7 +4,7 @@ package structural.decorator.gui;
 abstract class AbstractDecorator implements IWidget {
 
     // 4. "has a" relationship
-    private IWidget widget;
+    private final IWidget widget;
 
     public AbstractDecorator(IWidget widget) {
         this.widget = widget;

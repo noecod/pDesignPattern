@@ -16,7 +16,7 @@ public class DemoWithPattern {
 
         app.printTitle();
 
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -28,7 +28,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -41,7 +41,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -53,7 +53,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -62,7 +62,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -71,7 +71,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -80,7 +80,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -89,7 +89,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -98,7 +98,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -107,7 +107,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {
@@ -116,7 +116,7 @@ public class DemoWithPattern {
         }.run(sceneNo);
 
         sceneNo++;
-        new StartDoEndTemplate() {
+        new AbstractStartDoEndTemplate() {
 
             @Override
             public void doIt() {

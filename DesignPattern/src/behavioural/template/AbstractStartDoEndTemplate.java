@@ -1,6 +1,6 @@
 package behavioural.template;
 
-public abstract class StartDoEndTemplate {
+public abstract class AbstractStartDoEndTemplate {
 
     private final static int NUM_OF_MINUS_START_SCENE = 18;
     private final static int NUM_OF_MINUS_END_SCENE = 16;

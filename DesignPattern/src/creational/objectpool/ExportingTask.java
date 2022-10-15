@@ -21,6 +21,7 @@ public class ExportingTask implements Runnable {
 
         // for-loop is just for simulation
         for (int i = 0; i < 100_000; i++) {
+            // do nothing
         }
 
         // return ExportingProcess instance back to the pool

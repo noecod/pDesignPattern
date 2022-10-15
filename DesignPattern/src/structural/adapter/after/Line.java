@@ -2,7 +2,7 @@ package structural.adapter.after;
 
 public class Line implements IDrawable {
 
-    LegacyLine adaptee = new LegacyLine();
+    private final LegacyLine adaptee = new LegacyLine();
 
     @Override
     public void draw(int x1, int y1, int x2, int y2) {

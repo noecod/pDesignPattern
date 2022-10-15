@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public class CountNoOfItemsVisitor implements ICartVisitor {
 
-    private float sum = 0f;
+    private float sum = 0F;
 
     @Override
     public void visit(Cart cart) {

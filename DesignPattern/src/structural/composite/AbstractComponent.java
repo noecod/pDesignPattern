@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public abstract class AbstractComponent {
 
-    private String componentName;
+    private final String componentName;
     private int level = 0; // top level
 
     AbstractComponent(String name) {

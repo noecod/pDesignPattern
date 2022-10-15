@@ -19,11 +19,11 @@ public class Demo {
         List<Integer> list1 = Arrays.asList(4, 5, 6, 1, 2, 3, 7, 8, 9);
         List<IStrategy<Integer>> strategies1 = new ArrayList<>();
         strategies1.add(new MinimumInIntegerListStrategy());
-        strategies1.add(new TwoMinimumInInegerListStrategy());
+        strategies1.add(new TwoMinimumInIntegerListStrategy());
         strategies1.add(new SumUpIntegerListStrategy());
-        for (IStrategy<Integer> strategie : strategies1) {
-            execute(strategie, list1, 7);
-            execute(strategie, list1, 1);
+        for (IStrategy<Integer> strategy : strategies1) {
+            execute(strategy, list1, 7);
+            execute(strategy, list1, 1);
         }
 
         // test run 2

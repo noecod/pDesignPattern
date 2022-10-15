@@ -13,7 +13,6 @@ public class ReportWriterFactory {
         return switch (type) {
             case HTML -> new ReportWriterHTML();
             case TEXT -> new ReportWriterText();
-            default -> null;
         };
     }
 }

@@ -40,7 +40,7 @@ public class DemoNoPatternRefactored {
         app.startScene(sceneNo);
         System.out.println("- main actor enters room");
         System.out.println("- main actor: 'Hello everybody!'");
-        System.out.println("- group is grumling");
+        System.out.println("- group is grumbling");
         System.out.println("- big explosion");
         app.endScene(sceneNo);
 

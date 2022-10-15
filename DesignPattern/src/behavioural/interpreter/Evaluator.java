@@ -24,8 +24,9 @@ public class Evaluator implements IExpression {
                 final IExpression left = expressionStack.pop();
                 final IExpression subExpression = new Minus(left, right);
                 expressionStack.push(subExpression);
-            } else
+            } else {
                 expressionStack.push(new Variable(token));
+            }
         }
         syntaxTree = expressionStack.pop();
     }

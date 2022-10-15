@@ -7,7 +7,7 @@ import behavioural.strategy.base.AbstractStrategySearchMinimum;
 /**
  * Search a minimum value smaller than the reference element.
  */
-class TwoMinimumInInegerListStrategy extends AbstractStrategySearchMinimum<Integer> {
+class TwoMinimumInIntegerListStrategy extends AbstractStrategySearchMinimum<Integer> {
 
     private Integer minimum1;
     private Integer minimum2;

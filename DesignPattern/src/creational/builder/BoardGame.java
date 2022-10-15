@@ -24,7 +24,7 @@ public class BoardGame {
 
     @Getter
     @AllArgsConstructor
-    public class Board {
+    public static class Board {
 
         private final String name;
         private final int numOfFields;

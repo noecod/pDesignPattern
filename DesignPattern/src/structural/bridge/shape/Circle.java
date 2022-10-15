@@ -1,19 +1,16 @@
 package structural.bridge.shape;
 
+import lombok.AllArgsConstructor;
 import structural.bridge.IDrawingAPI;
 import structural.bridge.IShape;
 
+@AllArgsConstructor
 public class Circle implements IShape {
 
-    private double x, y, radius;
-    private IDrawingAPI drawingAPI;
-
-    public Circle(double x, double y, double radius, IDrawingAPI drawingAPI) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.drawingAPI = drawingAPI;
-    }
+    private final double x;
+    private final double y;
+    private double radius;
+    private final IDrawingAPI drawingAPI;
 
     // Implementation specific
     @Override

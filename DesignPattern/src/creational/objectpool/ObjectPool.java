@@ -16,7 +16,7 @@ public abstract class ObjectPool<T> {
      * @param minIdle Minimum number of objects residing in the pool.
      */
     public ObjectPool(final int minIdle) {
-        
+
         // initialize pool
         initialize(minIdle);
     }
@@ -32,7 +32,7 @@ public abstract class ObjectPool<T> {
      *                           will be removed.
      */
     public ObjectPool(final int minIdle, final int maxIdle, final long validationInterval) {
-        
+
         // initialize pool
         initialize(minIdle);
 

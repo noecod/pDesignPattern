@@ -8,7 +8,7 @@ public class QuattroStagioniAmerican extends AbstractPizza {
 
     @Override
     public final void cookIt() {
-        System.out
-                .println("add funghis, tomatoes, anchovis, mozzarella, prosciutto, olives, ... and cook in electric oven");
+        System.out.println(
+                "add funghis, tomatoes, anchovis, mozzarella, prosciutto, olives, ... and cook in electric oven");
     }
 }

@@ -8,7 +8,7 @@ public class Demo {
         CompositeComponent music = new CompositeComponent("MUSIC");
         CompositeComponent scorpions = new CompositeComponent("SCORPIONS");
         CompositeComponent dio = new CompositeComponent("DIO");
-        LeafComponent track1 = new LeafComponent("Don't wary, be happy.mp3");
+        LeafComponent track1 = new LeafComponent("Don't worry, be happy.mp3");
         LeafComponent track2 = new LeafComponent("track2.m3u");
         LeafComponent track3 = new LeafComponent("Wind of change.mp3");
         LeafComponent track4 = new LeafComponent("Big city night.mp3");

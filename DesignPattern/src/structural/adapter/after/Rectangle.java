@@ -2,7 +2,7 @@ package structural.adapter.after;
 
 public class Rectangle implements IDrawable {
 
-    private LegacyRectangle adaptee = new LegacyRectangle();
+    private final LegacyRectangle adaptee = new LegacyRectangle();
 
     @Override
     public void draw(int x1, int y1, int x2, int y2) {
