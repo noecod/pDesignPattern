@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 /**
- * Memoization evaluation implemented in Java.
+ * Memoization evaluation
  *
  * @param <I> input type
  * @param <R> result type
