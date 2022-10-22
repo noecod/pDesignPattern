@@ -1,5 +1,8 @@
 package creational.factorymethod;
 
+/**
+ * just a wrapper
+ */
 public final class SystemConfig {
 
     private static final ISystemConfiguration activeConfig;

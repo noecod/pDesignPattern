@@ -1,5 +1,6 @@
-package creational.factorymethod;
+package creational.factorymethod.configs;
 
+import creational.factorymethod.ISystemConfiguration;
 import lombok.Getter;
 
 @Getter
@@ -9,5 +10,5 @@ public class BigScreenConfiguration implements ISystemConfiguration {
     private final String description = "Big screen";
     private final int height = 1920;
     private final int width = 1080;
-    public final int numberOfElements = 120;
+    private final int numberOfElements = 120;
 }
