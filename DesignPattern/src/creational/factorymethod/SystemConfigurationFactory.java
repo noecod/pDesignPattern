@@ -20,6 +20,12 @@ public final class SystemConfigurationFactory {
         return switch (ACTIVE_CONFIGURATION) {
             case 1 -> new BasicConfiguration();
             case 2 -> new BigScreenConfiguration();
+            case 3 -> new IDefaultSystemConfiguration() {
+                @Override
+                public int getNumberOfElements() {
+                    return 500;
+                }
+            };
             default -> new DefaultConfig();
         };
     }
