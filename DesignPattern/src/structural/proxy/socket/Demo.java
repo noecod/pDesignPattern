@@ -5,6 +5,12 @@ import java.util.Scanner;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * Run the demo as following:
+ * - java -cp DesignPattern-0.0.1-SNAPSHOT.jar structural.proxy.socket.Demo first
+ * - java -cp DesignPattern-0.0.1-SNAPSHOT.jar structural.proxy.socket.Demo second
+ * and follow the instructions
+ */
 @AllArgsConstructor
 @Getter
 public class Demo {
@@ -37,7 +43,7 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-        Demo client = new Demo(args[0].toString());
+        Demo client = new Demo(args[0]);
         client.run();
     }
 }
