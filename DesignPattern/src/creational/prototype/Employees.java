@@ -27,10 +27,11 @@ public class Employees implements Cloneable {
     }
 
     /**
-     * Deep copy, see code about clone in the Java project.
+     * Deep copy ...
      */
     @Override
     public Object clone() throws CloneNotSupportedException {
+        super.clone();
         List<String> temp = new ArrayList<>(getEmpList());
         return new Employees(temp);
     }

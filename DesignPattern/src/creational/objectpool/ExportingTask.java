@@ -13,8 +13,8 @@ public class ExportingTask implements Runnable {
         // get an object from the pool
         ExportingProcess exportingProcess = pool.borrowObject();
 
-        System.out.println(
-            "Thread " + threadNo + ": Object with process no. " + exportingProcess.getProcessNo() + " was borrowed");
+        System.out.println("Thread " + threadNo + ": Object with process no. "
+                + exportingProcess.getProcessNo() + " was borrowed");
 
         // do something
         // ...
@@ -27,7 +27,7 @@ public class ExportingTask implements Runnable {
         // return ExportingProcess instance back to the pool
         pool.returnObject(exportingProcess);
 
-        System.out.println(
-            "Thread " + threadNo + ": Object with process no. " + exportingProcess.getProcessNo() + " was returned");
+        System.out.println("Thread " + threadNo + ": Object with process no. "
+                + exportingProcess.getProcessNo() + " was returned");
     }
 }
