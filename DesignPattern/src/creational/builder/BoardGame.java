@@ -1,6 +1,5 @@
 package creational.builder;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,11 +21,5 @@ public class BoardGame {
         board = new Board(name, numOfFields);
     }
 
-    @Getter
-    @AllArgsConstructor
-    public static class Board {
-
-        private final String name;
-        private final int numOfFields;
-    }
+    public record Board(String name, int numOfFields) { }
 }
