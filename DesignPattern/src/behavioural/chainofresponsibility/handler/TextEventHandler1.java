@@ -3,7 +3,7 @@ package behavioural.chainofresponsibility.handler;
 import behavioural.chainofresponsibility.event.IEvent;
 import behavioural.chainofresponsibility.event.TextEvent;
 
-public class TextEventHandler extends AbstractHandler {
+public class TextEventHandler1 extends AbstractHandler {
 
     @Override
     protected void processRequest(IEvent<?> request) {

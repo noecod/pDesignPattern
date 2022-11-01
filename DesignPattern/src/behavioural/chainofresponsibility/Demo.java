@@ -6,17 +6,20 @@ import behavioural.chainofresponsibility.event.TextEvent;
 import behavioural.chainofresponsibility.handler.AbstractHandler;
 import behavioural.chainofresponsibility.handler.NumberEventHandler;
 import behavioural.chainofresponsibility.handler.StarEventHandler;
-import behavioural.chainofresponsibility.handler.TextEventHandler;
+import behavioural.chainofresponsibility.handler.TextEventHandler1;
+import behavioural.chainofresponsibility.handler.TextEventHandler2;
 
 public class Demo {
 
     public static void main(String[] args) {
         // configure Chain of Responsibility
-        AbstractHandler textHandler = new TextEventHandler();
+        AbstractHandler textHandler1 = new TextEventHandler1();
+        AbstractHandler textHandler2 = new TextEventHandler2();
         AbstractHandler numberHandler = new NumberEventHandler();
         AbstractHandler starHandler = new StarEventHandler();
-        AbstractHandler root = textHandler; // start with the text handler
-        textHandler.setNext(numberHandler);
+        AbstractHandler root = textHandler1; // start with the text handler
+        textHandler1.setNext(textHandler2);
+        textHandler2.setNext(numberHandler);
         numberHandler.setNext(starHandler);
 
         // calling chain of responsibility
