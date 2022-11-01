@@ -7,7 +7,7 @@ import behavioural.observer.IInformationSet;
 
 public class WeatherForecast extends AbstractObservable {
 
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
 
     private static final String[] WEATHER = { "sunny", "rainy", "cloudy" };
 
@@ -24,7 +24,7 @@ public class WeatherForecast extends AbstractObservable {
         return new IInformationSet() {
 
             // random weather forecast
-            private final String text = WEATHER[random.nextInt(WEATHER.length)];
+            private final String text = WEATHER[RANDOM.nextInt(WEATHER.length)];
 
             @Override
             public String getType() {

@@ -1,5 +1,8 @@
 package behavioural.observer.subscriber;
 
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
 import behavioural.observer.IInformationSet;
 import behavioural.observer.IObserver;
 import lombok.AllArgsConstructor;
@@ -19,8 +22,15 @@ public abstract class AbstractObserver implements IObserver {
     }
 
     @Override
-    public void update(IInformationSet information) {
-        System.out.println(this.getClass().getSimpleName() + "(" + getFirstName() + " " + getSureName()
-            + ") was updated with the " + information.getType() + "(" + information.getTopic() + ")");
+    public void update(IInformationSet info) {
+        final String indent = "  ";
+        System.out.println(getClass().getSimpleName() + "(" + getFirstName() + " " + getSureName()
+                + ", " + getIdentifier() + ")" + System.lineSeparator()
+                + indent + "was updated with the " + info.getType() + System.lineSeparator()
+                + indent
+                + DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(info.getPublicationDateTime())
+                + " => " + info.getTopic() + System.lineSeparator()
+                + indent + "summary: " + info.getSummary() + System.lineSeparator()
+                + indent + "details: " + info.getDetails() + System.lineSeparator());
     }
 }
