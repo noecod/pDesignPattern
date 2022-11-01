@@ -21,5 +21,6 @@ public class BoardGame {
         board = new Board(name, numOfFields);
     }
 
-    public record Board(String name, int numOfFields) { }
+    // @formatter:off
+    public record Board(String name, int numOfFields) {}
 }

@@ -14,6 +14,7 @@ public class ReportGeneratorFacade {
         if (type == null || dataSource == null) {
             // throw some exception
             System.out.println("Exception: invalid input");
+            return;
         }
 
         // Create report
