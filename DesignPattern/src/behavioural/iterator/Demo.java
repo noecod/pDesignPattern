@@ -9,6 +9,7 @@ public class Demo {
             String name = (String) iter.next();
             System.out.println("Name: " + name);
         }
+
         System.out.println();
 
         for (IIterator iter = namesRepository.getSortedIterator(); iter.hasNext();) {

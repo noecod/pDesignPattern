@@ -7,17 +7,17 @@ public class DimLightCommand implements ICommand {
 
     private static final String COMMAND_NAME = "DIM";
 
-    private final ReceiverLight theLight;
+    private final ReceiverLight receiverLight;
     private final int percentage;
 
-    public DimLightCommand(ReceiverLight light, int percentage) {
-        theLight = light;
+    public DimLightCommand(ReceiverLight receiverLight, int percentage) {
+        this.receiverLight = receiverLight;
         this.percentage = percentage;
     }
 
     @Override
     public void execute() {
-        theLight.dim(percentage);
+        receiverLight.dim(percentage);
     }
 
     @Override

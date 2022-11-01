@@ -27,9 +27,7 @@ public class Article {
         } else {
             // throw an exception
             System.out.println("can't restore over article with different id. This id: " +
-                    getId() +
-                    ", Memento: " +
-                    memento.id());
+                    getId() + ", Memento: " + memento.id());
         }
     }
 

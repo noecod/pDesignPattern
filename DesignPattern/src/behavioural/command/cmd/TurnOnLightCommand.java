@@ -7,15 +7,15 @@ public class TurnOnLightCommand implements ICommand {
 
     private static final String COMMAND_NAME = "TURN ON";
 
-    private final ReceiverLight theLight;
+    private final ReceiverLight receiverLight;
 
-    public TurnOnLightCommand(ReceiverLight light) {
-        theLight = light;
+    public TurnOnLightCommand(ReceiverLight receiverLight) {
+        this.receiverLight = receiverLight;
     }
 
     @Override
     public void execute() {
-        theLight.turnOn();
+        receiverLight.turnOn();
     }
 
     @Override
