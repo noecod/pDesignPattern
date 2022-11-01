@@ -4,7 +4,7 @@ public class Demo {
 
     public static void main(String[] args) {
         Object[] shapes = { new LegacyLine(), new LegacyRectangle() };
-        // A begin and end point from a graphical editor
+        // A start and end point from a graphical editor
         int x1 = 10, y1 = 20;
         int x2 = 30, y2 = 60;
         for (Object shape : shapes) {
