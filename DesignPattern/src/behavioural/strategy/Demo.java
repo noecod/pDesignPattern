@@ -21,6 +21,7 @@ public class Demo {
         strategies1.add(new MinimumInIntegerListStrategy());
         strategies1.add(new TwoMinimumInIntegerListStrategy());
         strategies1.add(new SumUpIntegerListStrategy());
+
         for (IStrategy<Integer> strategy : strategies1) {
             execute(strategy, list1, 7);
             execute(strategy, list1, 1);
@@ -30,6 +31,7 @@ public class Demo {
         List<String> list2 = Arrays.asList("Anna", "Toni", "Eugen", "Lili", "Thomas", "Hans", "Ashley", "Heidi");
         List<IStrategy<String>> strategies2 = new ArrayList<>();
         strategies2.add(new FindInList());
+
         for (IStrategy<String> strategy : strategies2) {
             execute(strategy, list2, "Eugen");
             execute(strategy, list2, "Kurt");
