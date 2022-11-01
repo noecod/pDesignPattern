@@ -5,33 +5,33 @@ package creational.factorymethod;
  */
 public final class SystemConfig {
 
-    private static final ISystemConfiguration activeConfig;
+    private static final ISystemConfiguration ACTIVE_CONFIG;
 
     static {
-        activeConfig = SystemConfigurationFactory.getActiveConfiguration();
+        ACTIVE_CONFIG = SystemConfigurationFactory.getActiveConfiguration();
     }
 
     private SystemConfig() {
     }
 
     public static String getTitle() {
-        return activeConfig.getTitle();
+        return ACTIVE_CONFIG.getTitle();
     }
 
     public static String getDescription() {
-        return activeConfig.getDescription();
+        return ACTIVE_CONFIG.getDescription();
     }
 
     public static int getHeight() {
-        return activeConfig.getHeight();
+        return ACTIVE_CONFIG.getHeight();
     }
 
     public static int getWidth() {
-        return activeConfig.getWidth();
+        return ACTIVE_CONFIG.getWidth();
     }
 
     public static int getNumberOfElements() {
-        return activeConfig.getNumberOfElements();
+        return ACTIVE_CONFIG.getNumberOfElements();
     }
 
 }
