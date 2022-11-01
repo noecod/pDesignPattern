@@ -11,9 +11,7 @@ public class Demo2 {
     public static void main(String[] args) {
         HeadLamp hl = new HeadLamp();
 
-        /*
-         * Fire some events and print FSM state
-         */
+        // Fire some events and print FSM state
         hl.printState("head lamp initial state : ");
 
         Scanner scanner = new Scanner(System.in);
