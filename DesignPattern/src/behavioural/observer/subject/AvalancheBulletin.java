@@ -27,28 +27,18 @@ public class AvalancheBulletin extends AbstractObservable {
             private final String text = DANGER_SCALE[RANDOM.nextInt(DANGER_SCALE.length)];
 
             @Override
-            public String getType() {
-                return AvalancheBulletin.this.getClass().getSimpleName() + "(" + getName() + ")";
-            }
-
-            @Override
-            public String getTopic() {
-                return text.toUpperCase();
-            }
-
-            @Override
-            public String getSummary() {
-                return text;
-            }
-
-            @Override
             public LocalDateTime getPublicationDateTime() {
                 return LocalDateTime.now();
             }
 
             @Override
-            public String getDetails() {
-                return "Danger is set to " + text;
+            public String getType() {
+                return AvalancheBulletin.this.getClass().getSimpleName() + "(" + getName() + ")";
+            }
+
+            @Override
+            public String getHeadlines() {
+                return text.toUpperCase();
             }
         };
     }

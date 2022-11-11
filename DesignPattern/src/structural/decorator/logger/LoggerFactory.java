@@ -6,13 +6,13 @@ public class LoggerFactory {
     public static final String TYPE_FILE_LOGGER = "file";
 
     public ILogger getLogger(String type, String name) {
-        if (TYPE_CONSOLE_LOGGER.equals(type)) {
-            return new ConsoleLogger();
-        } else if (TYPE_FILE_LOGGER.equals(type)) {
-            return new FileLogger(name);
-        } else {
-            System.out.println("Error creating logger. Logger type unknown.");
-            return null;
-        }
+        return switch (type) {
+            case TYPE_CONSOLE_LOGGER -> new ConsoleLogger();
+            case TYPE_FILE_LOGGER -> new FileLogger(name);
+            default -> {
+                System.out.println("Error creating logger. Logger type unknown.");
+                yield null;
+            }
+        };
     }
 }

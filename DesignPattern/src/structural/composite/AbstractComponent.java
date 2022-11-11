@@ -7,6 +7,8 @@ import lombok.Setter;
 @Setter
 public abstract class AbstractComponent {
 
+    private static final String INDENT = "   ";
+
     private final String componentName;
     private int level = 0; // top level
 
@@ -15,7 +17,7 @@ public abstract class AbstractComponent {
     }
 
     public void print() {
-        System.out.println("   ".repeat(getLevel()) + getComponentName() + " - on Level " + getLevel());
+        System.out.println(INDENT.repeat(getLevel()) + getComponentName() + " - on Level " + getLevel());
         componentPrint();
     }
 

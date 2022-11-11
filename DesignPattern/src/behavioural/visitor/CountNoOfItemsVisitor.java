@@ -15,7 +15,7 @@ public class CountNoOfItemsVisitor implements ICartVisitor {
     @Override
     public void visit(CartItem item) {
         sum = sum + item.getQuantity();
-        System.out.println("Add article " + item.getArticle().getDescription() + " with quantity " + item.getQuantity()
-            + " => partial sum: " + sum);
+        System.out.println("Add article " + item.getArticle().getDescription() + " with quantity " +
+                item.getQuantity() + " => partial sum: " + sum);
     }
 }

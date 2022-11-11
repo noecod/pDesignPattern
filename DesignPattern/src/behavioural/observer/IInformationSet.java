@@ -4,13 +4,10 @@ import java.time.LocalDateTime;
 
 public interface IInformationSet {
 
-    String getType();
-
     LocalDateTime getPublicationDateTime();
 
-    String getTopic();
+    String getType();
 
-    String getSummary();
+    String getHeadlines();
 
-    String getDetails();
 }

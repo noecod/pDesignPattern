@@ -2,9 +2,11 @@ package behavioural.memento;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class Article {
 
     private final long id; // not changeable
@@ -31,8 +33,4 @@ public class Article {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Article [id=" + id + ", title=" + title + ", content=" + content + "]";
-    }
 }

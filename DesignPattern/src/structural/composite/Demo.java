@@ -2,8 +2,6 @@ package structural.composite;
 
 public class Demo {
 
-    public static StringBuffer compositeBuilder = new StringBuffer();
-
     public static void main(String[] args) {
         CompositeComponent music = new CompositeComponent("MUSIC");
         CompositeComponent scorpions = new CompositeComponent("SCORPIONS");

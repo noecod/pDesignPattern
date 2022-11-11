@@ -29,8 +29,6 @@ public abstract class AbstractObserver implements IObserver {
                 + indent + "was updated with the " + info.getType() + System.lineSeparator()
                 + indent
                 + DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(info.getPublicationDateTime())
-                + " => " + info.getTopic() + System.lineSeparator()
-                + indent + "summary: " + info.getSummary() + System.lineSeparator()
-                + indent + "details: " + info.getDetails() + System.lineSeparator());
+                + " => " + info.getHeadlines());
     }
 }

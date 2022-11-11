@@ -17,8 +17,8 @@ public abstract class AbstractStrategySolution<T> implements IStrategy<T> {
     }
 
     /**
-     * * Find a solution for the given strategy.
-     * 
+     * Find a solution for the given strategy.
+     *
      * @param list    with values of T.
      * @param element reference element
      * @return true, if a solution is found, false otherwise.
@@ -27,7 +27,7 @@ public abstract class AbstractStrategySolution<T> implements IStrategy<T> {
 
     /**
      * Solution values.
-     * 
+     *
      * @return List with the solution values.
      */
     public abstract List<T> getSolution();

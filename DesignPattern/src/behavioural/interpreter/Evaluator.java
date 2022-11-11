@@ -20,7 +20,7 @@ public class Evaluator implements IExpression {
             } else if (token.equals("-")) {
                 // it's necessary to remove first the right operand from the stack
                 final IExpression right = expressionStack.pop();
-                // ..and then the left one
+                // ...and then the left one
                 final IExpression left = expressionStack.pop();
                 final IExpression subExpression = new Minus(left, right);
                 expressionStack.push(subExpression);

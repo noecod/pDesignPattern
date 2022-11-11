@@ -27,28 +27,18 @@ public class WeatherForecast extends AbstractObservable {
             private final String text = WEATHER[RANDOM.nextInt(WEATHER.length)];
 
             @Override
-            public String getType() {
-                return WeatherForecast.this.getClass().getSimpleName() + "(" + getName() + ")";
-            }
-
-            @Override
-            public String getTopic() {
-                return text.toUpperCase();
-            }
-
-            @Override
-            public String getSummary() {
-                return text;
-            }
-
-            @Override
             public LocalDateTime getPublicationDateTime() {
                 return LocalDateTime.now();
             }
 
             @Override
-            public String getDetails() {
-                return "Today it is mostly " + text;
+            public String getType() {
+                return WeatherForecast.this.getClass().getSimpleName() + "(" + getName() + ")";
+            }
+
+            @Override
+            public String getHeadlines() {
+                return text.toUpperCase();
             }
         };
     }

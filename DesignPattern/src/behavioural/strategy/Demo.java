@@ -11,15 +11,16 @@ public class Demo {
     private static <T> void execute(IStrategy<T> strategy, List<T> list, T element) {
         List<T> solution = strategy.solve(list, element);
         String text = (solution == null ? "no solution found" : "solution found");
-        System.out.println(text + " => result: " + solution);
+        System.out.println(strategy.getClass().getSimpleName() + " for " + list + " and reference element " + element);
+        System.out.println("  " + text + " => result: " + solution);
     }
 
     public static void main(String[] args) {
         // test run 1
-        List<Integer> list1 = Arrays.asList(4, 5, 6, 1, 2, 3, 7, 8, 9);
+        List<Integer> list1 = List.of(4, 5, 6, 1, 2, 3, 7, 8, 9);
         List<IStrategy<Integer>> strategies1 = new ArrayList<>();
         strategies1.add(new MinimumInIntegerListStrategy());
-        strategies1.add(new TwoMinimumInIntegerListStrategy());
+        strategies1.add(new TwoMinimaInIntegerListStrategy());
         strategies1.add(new SumUpIntegerListStrategy());
 
         for (IStrategy<Integer> strategy : strategies1) {
@@ -28,7 +29,7 @@ public class Demo {
         }
 
         // test run 2
-        List<String> list2 = Arrays.asList("Anna", "Toni", "Eugen", "Lili", "Thomas", "Hans", "Ashley", "Heidi");
+        List<String> list2 = List.of("Anna", "Toni", "Eugen", "Lili", "Thomas", "Hans", "Ashley", "Heidi");
         List<IStrategy<String>> strategies2 = new ArrayList<>();
         strategies2.add(new FindInList());
 

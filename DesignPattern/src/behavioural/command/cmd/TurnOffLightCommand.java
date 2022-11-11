@@ -2,16 +2,14 @@ package behavioural.command.cmd;
 
 import behavioural.command.ICommand;
 import behavioural.command.ReceiverLight;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class TurnOffLightCommand implements ICommand {
 
     private static final String COMMAND_NAME = "TURN OFF";
 
     private final ReceiverLight receiverLight;
-
-    public TurnOffLightCommand(ReceiverLight receiverLight) {
-        this.receiverLight = receiverLight;
-    }
 
     @Override
     public void execute() {

@@ -10,10 +10,7 @@ class SumUpIntegerListStrategy extends AbstractStrategySolution<Integer> {
 
     @Override
     public boolean findSolution(List<Integer> list, Integer element) {
-        result = 0;
-        for (Integer value : list) {
-            result += value;
-        }
+        result = list.stream().reduce(0, (a,b) -> a + b);
         return true;
     }
 

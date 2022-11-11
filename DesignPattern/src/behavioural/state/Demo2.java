@@ -4,10 +4,6 @@ import java.util.Scanner;
 
 public class Demo2 {
 
-    public static void printState(HeadLamp hl) {
-        hl.printState("head lamp state: ");
-    }
-
     public static void main(String[] args) {
         HeadLamp hl = new HeadLamp();
 
@@ -23,29 +19,19 @@ public class Demo2 {
 
         while (true) {
             String input = scanner.nextLine();
-            if (input.trim().equalsIgnoreCase("s")) {
-                System.out.println("input = " + input.trim());
-                System.out.println("Firing short push event..");
-                hl.pushShort();
-                printState(hl);
+
+            System.out.println("input = " + input.trim());
+            switch (input.trim().toUpperCase()) {
+                case "S" -> hl.pushShort();
+                case "L" -> hl.pushLong();
+                case "P" -> hl.triggerPeriodPassed();
+                case "Q" -> {
+                    System.out.println("Bye!");
+                    System.exit(0);
+                }
             }
-            if (input.trim().equalsIgnoreCase("l")) {
-                System.out.println("input = " + input.trim());
-                System.out.println("Firing long push event..");
-                hl.pushLong();
-                printState(hl);
-            }
-            if (input.trim().equalsIgnoreCase("p")) {
-                System.out.println("input = " + input.trim());
-                System.out.println("Firing trigger period passed event..");
-                hl.triggerPeriodPassed();
-                printState(hl);
-            }
-            if (input.trim().equalsIgnoreCase("q")) {
-                System.out.println("input = " + input.trim());
-                System.out.println("Bye!");
-                System.exit(0);
-            }
+            hl.printState("head lamp state: ");
         }
     }
+
 }

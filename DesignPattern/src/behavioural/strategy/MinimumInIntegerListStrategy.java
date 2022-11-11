@@ -17,11 +17,7 @@ class MinimumInIntegerListStrategy extends AbstractStrategySearchMinimum<Integer
         if (list == null || list.isEmpty()) {
             return false;
         }
-        for (Integer value : list) {
-            if (value < result) {
-                result = value;
-            }
-        }
+        result = list.stream().mapToInt(v -> v).min().orElse(Integer.MAX_VALUE);
         return (result < element);
     }
 

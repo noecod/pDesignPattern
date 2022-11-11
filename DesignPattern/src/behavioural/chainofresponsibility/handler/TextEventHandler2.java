@@ -10,7 +10,7 @@ public class TextEventHandler2 extends AbstractHandler {
     @Override
     protected void processRequest(IEvent<?> request) {
         if (request instanceof TextEvent textEvent) {
-            System.out.println("TextEventHandler.processRequest: " + encrypt(textEvent.getPayLoad(), SHIFT));
+            System.out.println("TextEventHandler2.processRequest: " + encrypt(textEvent.getPayLoad(), SHIFT));
         } else {
             System.out.println(getClass().getSimpleName() + " doesn't process " + request.getClass().getSimpleName());
         }

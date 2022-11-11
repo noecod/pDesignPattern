@@ -6,7 +6,8 @@ import structural.flyweight.obj.DoubleLetter;
 
 public class Demo {
 
-    public static final int ROWS = 15, COLS = 35;
+    public static final int ROWS = 15;
+    public static final int COLS = 35;
     private static final Random RANDOM = new Random();
 
     private static DoubleLetter[][] matrix;

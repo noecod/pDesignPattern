@@ -14,6 +14,6 @@ public class ChatUser extends User {
 
     @Override
     public void receive(String msg) {
-        System.out.println(getName() + " :: Received Message : " + msg);
+        System.out.println(getName() + " :: Receiving Message : " + msg);
     }
 }

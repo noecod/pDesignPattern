@@ -1,14 +1,13 @@
 package structural.decorator.gui;
 
+import lombok.AllArgsConstructor;
+
 // 2. Second level base class with "isa" relationship
+@AllArgsConstructor
 abstract class AbstractDecorator implements IWidget {
 
     // 4. "has a" relationship
     private final IWidget widget;
-
-    public AbstractDecorator(IWidget widget) {
-        this.widget = widget;
-    }
 
     // 5. Delegation
     @Override

@@ -14,12 +14,8 @@ public class FindInList extends AbstractStrategySolution<String> {
         if (element == null) {
             return false;
         }
-        for (String listElement : list) {
-            if (element.equals(listElement)) {
-                return true;
-            }
-        }
-        return false;
+
+        return list.stream().anyMatch(e -> e.equals(element));
     }
 
     @Override

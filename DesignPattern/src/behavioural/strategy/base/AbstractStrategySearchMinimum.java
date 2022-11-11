@@ -20,16 +20,17 @@ public abstract class AbstractStrategySearchMinimum<T> implements IStrategy<T> {
 
     /**
      * Search somehow a minimum.
-     * 
-     * @param list with values
+     *
+     * @param list    with values
+     * @param element search a Minimum smaller than this value
      * @return true, if a minimum is found, false otherwise
      */
     public abstract boolean searchMinimum(List<T> list, T element);
 
     /**
      * The found minimum value.
-     * 
-     * @return minimum value in a list
+     *
+     * @return minimum value
      */
     public abstract List<T> getMinimum();
 }

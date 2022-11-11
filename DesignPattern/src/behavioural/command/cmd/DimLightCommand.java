@@ -2,18 +2,15 @@ package behavioural.command.cmd;
 
 import behavioural.command.ICommand;
 import behavioural.command.ReceiverLight;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class DimLightCommand implements ICommand {
 
     private static final String COMMAND_NAME = "DIM";
 
     private final ReceiverLight receiverLight;
     private final int percentage;
-
-    public DimLightCommand(ReceiverLight receiverLight, int percentage) {
-        this.receiverLight = receiverLight;
-        this.percentage = percentage;
-    }
 
     @Override
     public void execute() {
