@@ -5,13 +5,13 @@ package structural.memoizedevaluation;
  */
 public class ComplexCalculation {
 
-    private static final Memoizer<Input, Long> lazyCompute = Memoizer.of(i -> {
+    private static final Memoizer<Input, Long> memoizedFunction = Memoizer.of(i -> {
         System.out.println("calculating ...");
         return i.x + i.y;
     });
 
     public static long calc(long x, long y) {
-        return lazyCompute.apply(new Input(x, y));
+        return memoizedFunction.apply(new Input(x, y));
     }
 
     // @formatter:off

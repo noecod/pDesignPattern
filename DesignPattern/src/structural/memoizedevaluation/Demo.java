@@ -9,16 +9,16 @@ public class Demo {
     }
 
     public static void example1() {
-        Memoizer<Integer, Boolean> memoEven = Memoizer.of(i -> {
+        Memoizer<Integer, Boolean> memoizedFunction = Memoizer.of(i -> {
             System.out.println("calculating ...");
             return i % 2 == 0;
         });
 
-        show1(4, memoEven.apply(4));
-        show1(5, memoEven.apply(5));
-        show1(19, memoEven.apply(19));
-        show1(5, memoEven.apply(5));
-        show1(19, memoEven.apply(19));
+        show1(4, memoizedFunction.apply(4));
+        show1(5, memoizedFunction.apply(5));
+        show1(19, memoizedFunction.apply(19));
+        show1(5, memoizedFunction.apply(5));
+        show1(19, memoizedFunction.apply(19));
     }
 
     public static void show1(int num, boolean result) {
