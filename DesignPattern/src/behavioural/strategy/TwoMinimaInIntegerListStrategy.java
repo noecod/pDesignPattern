@@ -5,7 +5,7 @@ import java.util.List;
 import behavioural.strategy.base.AbstractStrategySearchMinimum;
 
 /**
- * Search a minimum value smaller than the reference element.
+ * Search two minimum values smaller than the reference element.
  */
 class TwoMinimaInIntegerListStrategy extends AbstractStrategySearchMinimum<Integer> {
 
