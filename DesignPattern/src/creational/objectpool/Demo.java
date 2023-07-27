@@ -15,7 +15,7 @@ public class Demo {
         // Creates a pool of objects of type ExportingProcess. Parameters:
         // 1) Minimum number of special ExportingProcess instances residing in the pool = 4
         // 2) Maximum number of special ExportingProcess instances residing in the pool = 10
-        // 3) Time in seconds for periodical checking of minIdle / maxIdle conditions in a separate thread = 5''.
+        // 3) Time in seconds for periodical checking of minIdle / maxIdle conditions in a separate thread = 5.
         //
         // When the number of ExportingProcess instances is less than minIdle, missing instances will be created.
         // When the number of ExportingProcess instances is greater than maxIdle, excessive instances will be removed.
@@ -49,6 +49,7 @@ public class Demo {
         executor.execute(new ExportingTask(pool, 8));
 
         executor.shutdown();
+
         try {
             executor.awaitTermination(30, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
