@@ -8,26 +8,26 @@ public class Demo {
     public static void main(String[] args) {
         List<BoardGame> boardGames = new ArrayList<>();
 
-        Director d = new Director();
+        Director director = new Director();
 
-        ChessBuilder chessB = new ChessBuilder();
-        ScrabbleBuilder scrabbleB = new ScrabbleBuilder();
-        d.constructPlain(chessB);
-        boardGames.add(chessB.getGame());
-        d.constructPlain(scrabbleB);
-        boardGames.add(scrabbleB.getGame());
+        ChessBuilder chessBuilder = new ChessBuilder();
+        ScrabbleBuilder scrabbleBuilder = new ScrabbleBuilder();
+        director.constructPlain(chessBuilder);
+        boardGames.add(chessBuilder.getGame());
+        director.constructPlain(scrabbleBuilder);
+        boardGames.add(scrabbleBuilder.getGame());
 
-        chessB = new ChessBuilder();
-        scrabbleB = new ScrabbleBuilder();
-        d.constructPresent(chessB);
-        boardGames.add(chessB.getGame());
-        d.constructPresent(scrabbleB);
-        boardGames.add(scrabbleB.getGame());
+        chessBuilder = new ChessBuilder();
+        scrabbleBuilder = new ScrabbleBuilder();
+        director.constructPresent(chessBuilder);
+        boardGames.add(chessBuilder.getGame());
+        director.constructPresent(scrabbleBuilder);
+        boardGames.add(scrabbleBuilder.getGame());
 
-        boardGames.forEach(bg -> printG(bg));
+        boardGames.forEach(Demo::printGame);
     }
 
-    public static void printG(BoardGame bg) {
+    public static void printGame(BoardGame bg) {
         System.out.println("Board Game:");
         System.out.println("board: " + bg.getBoard().name() + " with " + bg.getBoard().numOfFields() + " fields");
         System.out.println("figures: " + bg.getFigures());

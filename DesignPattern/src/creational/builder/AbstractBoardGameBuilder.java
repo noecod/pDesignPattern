@@ -2,6 +2,8 @@ package creational.builder;
 
 public abstract class AbstractBoardGameBuilder {
 
+    protected final BoardGame product = new BoardGame();
+
     public abstract void buildBoard();
 
     public abstract void buildFigures();
@@ -12,5 +14,7 @@ public abstract class AbstractBoardGameBuilder {
 
     public abstract void wrapping();
 
-    public abstract BoardGame getGame();
+    public BoardGame getGame() {
+        return product;
+    }
 }

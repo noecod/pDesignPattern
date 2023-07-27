@@ -2,8 +2,6 @@ package creational.builder;
 
 public class ChessBuilder extends AbstractBoardGameBuilder {
 
-    private final BoardGame product = new BoardGame();
-
     @Override
     public void buildBoard() {
         product.createBoard("8x8 Board", 16);
@@ -29,8 +27,4 @@ public class ChessBuilder extends AbstractBoardGameBuilder {
         product.setWrapping(true);
     }
 
-    @Override
-    public BoardGame getGame() {
-        return product;
-    }
 }

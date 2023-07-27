@@ -1,8 +1,8 @@
 package creational.builder;
 
-public class ScrabbleBuilder extends AbstractBoardGameBuilder {
+import lombok.NoArgsConstructor;
 
-    private final BoardGame product = new BoardGame();
+public class ScrabbleBuilder extends AbstractBoardGameBuilder {
 
     @Override
     public void buildBoard() {
@@ -29,8 +29,4 @@ public class ScrabbleBuilder extends AbstractBoardGameBuilder {
         product.setWrapping(true);
     }
 
-    @Override
-    public BoardGame getGame() {
-        return product;
-    }
 }
