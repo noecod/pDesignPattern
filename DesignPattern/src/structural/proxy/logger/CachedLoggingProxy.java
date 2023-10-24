@@ -3,16 +3,22 @@ package structural.proxy.logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CachedLoggingProxy implements ICachedLogging {
+public class CachedLoggingProxy implements ILogging {
 
     private static final int CACHE_SIZE = 4;
 
     List<String> cachedLogEntries = new ArrayList<>();
-    CachedLogger cachedLogger = new CachedLogger();
+    Logger logger = new Logger();
 
     @Override
     public void logRequest(String logString) {
         addLogRequest(logString);
+    }
+
+    @Override
+    public void flush() {
+        logger.flush();
+        performLogging();
     }
 
     private void addLogRequest(String logString) {
@@ -23,17 +29,17 @@ public class CachedLoggingProxy implements ICachedLogging {
     }
 
     private void performLogging() {
-        StringBuffer accumulatedLogString = new StringBuffer();
+        StringBuilder accumulatedLogString = new StringBuilder();
 
         cachedLogEntries.forEach(s -> {
-            accumulatedLogString.append("\n" + s);
+            accumulatedLogString.append("\n").append(s);
             System.out.println(getAddMsg(s));
         });
-
-        System.out.println("CachedLoggingProxy: sends accumulated logstring to CachedLogger.");
-        cachedLogger.logRequest(accumulatedLogString.toString());
         cachedLogEntries.clear();
         System.out.println("CachedLoggingProxy: cachedLogEntries cleared.");
+
+        System.out.println("CachedLoggingProxy: sends accumulated logstring to CachedLogger.");
+        logger.logRequest(accumulatedLogString.toString());
     }
 
     private String getAddMsg(String logString) {
