@@ -5,7 +5,7 @@
     <artifactId>DesignPattern</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-        <org.projectlombok.version>1.18.30</org.projectlombok.version>
+        <org.projectlombok.version>1.18.34</org.projectlombok.version>
     </properties>
     <build>
         <sourceDirectory>src</sourceDirectory>
@@ -20,7 +20,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>4.0.0-beta-1</version>
                 <configuration>
                     <source>21</source>
                     <target>21</target>
