@@ -2,10 +2,13 @@ package behavioural.visitor;
 
 import lombok.Getter;
 
+/**
+ * Simply counts all the items.
+ */
 @Getter
 public class CountNoOfItemsVisitor implements ICartVisitor {
 
-    private float sum = 0F;
+    private int sum = 0;
 
     @Override
     public void visit(Cart cart) {

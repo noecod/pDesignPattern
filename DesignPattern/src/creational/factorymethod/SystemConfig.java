@@ -12,6 +12,7 @@ public final class SystemConfig {
     }
 
     private SystemConfig() {
+        // hide
     }
 
     public static String getTitle() {

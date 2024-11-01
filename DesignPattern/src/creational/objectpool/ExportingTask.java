@@ -20,7 +20,7 @@ public class ExportingTask implements Runnable {
         // ...
 
         // for-loop is just for simulation
-        for (int i = 0; i < 100_000; i++) {
+        for (int __ = 0; __ < 100_000; __++) {
             // do nothing
         }
 

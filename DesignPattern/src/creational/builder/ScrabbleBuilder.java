@@ -1,7 +1,5 @@
 package creational.builder;
 
-import lombok.NoArgsConstructor;
-
 public class ScrabbleBuilder extends AbstractBoardGameBuilder {
 
     @Override

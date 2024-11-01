@@ -6,7 +6,7 @@ import lombok.Data;
 public class CartItem implements IVisitable {
 
     private Article article;
-    private float quantity;
+    private int quantity;
 
     @Override
     public void accept(ICartVisitor visitor) {

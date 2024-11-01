@@ -11,7 +11,8 @@ public class Demo {
     private static <T> void execute(IStrategy<T> strategy, List<T> list, T element) {
         List<T> solution = strategy.solve(list, element);
         String text = (solution == null ? "no solution found" : "solution found");
-        System.out.println(strategy.getClass().getSimpleName() + " for " + list + " and reference element " + element);
+        System.out.println(strategy.getClass().getSimpleName() + " for " + list +
+                           " and reference element '" + element + "'");
         System.out.println("  " + text + " => result: " + solution);
     }
 

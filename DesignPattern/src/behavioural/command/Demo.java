@@ -16,7 +16,7 @@ public class Demo {
 
         InvokerSwitch lightSwitch = new InvokerSwitch();
 
-        for (int i = 0; i < ITERATIONS; i++) {
+        for (int __ = 0; __ < ITERATIONS; __++) {
             int randomNumber = RANDOM.nextInt(3);
 
             switch (randomNumber) {

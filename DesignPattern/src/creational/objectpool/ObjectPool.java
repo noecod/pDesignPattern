@@ -45,12 +45,12 @@ public abstract class ObjectPool<T> {
                 int size = pool.size();
                 if (size < minIdle) {
                     int sizeToBeAdded = minIdle - size;
-                    for (int i = 0; i < sizeToBeAdded; i++) {
+                    for (int __ = 0; __ < sizeToBeAdded; __++) {
                         pool.add(createObject());
                     }
                 } else if (size > maxIdle) {
                     int sizeToBeRemoved = size - maxIdle;
-                    for (int i = 0; i < sizeToBeRemoved; i++) {
+                    for (int __ = 0; __ < sizeToBeRemoved; __++) {
                         pool.poll();
                     }
                 }
@@ -101,7 +101,7 @@ public abstract class ObjectPool<T> {
 
     private void initialize(final int minIdle) {
         pool = new ConcurrentLinkedQueue<>();
-        for (int i = 0; i < minIdle; i++) {
+        for (int __ = 0; __ < minIdle; __++) {
             pool.add(createObject());
         }
     }

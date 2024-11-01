@@ -9,6 +9,7 @@ final class SystemConfigurationFactory {
     private final static int ACTIVE_CONFIGURATION = 2;
 
     private SystemConfigurationFactory() {
+       // hide
     }
 
     /**

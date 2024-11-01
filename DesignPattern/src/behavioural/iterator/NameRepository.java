@@ -15,15 +15,16 @@ public class NameRepository implements IContainer {
     public IIterator getSortedIterator() {
         return new NameSortedIterator();
     }
-    
+
     private abstract class AbstractNameBaseIterator implements IIterator {
-        int index = 0;
-        String[] localListCopy = names;
-        
+
+        private int index = 0;
+        protected String[] localListCopy = names;
+
         public AbstractNameBaseIterator() {
             initialize();
         }
-        
+
         abstract void initialize();
 
         @Override

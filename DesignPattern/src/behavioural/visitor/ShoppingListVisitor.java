@@ -1,5 +1,8 @@
 package behavioural.visitor;
 
+/**
+ * Lists all the items.
+ */
 public class ShoppingListVisitor implements ICartVisitor {
 
     @Override

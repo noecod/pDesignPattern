@@ -6,6 +6,7 @@ public class FileLogger {
 
     // Prevent clients from using the constructor
     private FileLogger() {
+        // hide
     }
 
     // Control the accessible (allowed) instances

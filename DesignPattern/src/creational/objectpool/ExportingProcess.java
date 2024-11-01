@@ -16,7 +16,7 @@ public class ExportingProcess {
         // ...
 
         // for-loop is just for simulation
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+        for (int __ = 0; __ < Integer.MAX_VALUE; __++) {
             // do nothing
         }
 

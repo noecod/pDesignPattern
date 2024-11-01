@@ -4,6 +4,7 @@ public class Singleton {
 
     // Private constructor prevents instantiation from other classes
     private Singleton() {
+        // hide
     }
 
     /**

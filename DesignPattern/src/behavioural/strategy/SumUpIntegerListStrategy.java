@@ -9,13 +9,13 @@ class SumUpIntegerListStrategy extends AbstractStrategySolution<Integer> {
     private Integer result;
 
     @Override
-    public boolean findSolution(List<Integer> list, Integer element) {
+    public boolean findSolutions(List<Integer> list, Integer __) {
         result = list.stream().reduce(0, (a,b) -> a + b);
         return true;
     }
 
     @Override
-    public List<Integer> getSolution() {
+    public List<Integer> getSolutions() {
         return List.of(result);
     }
 }

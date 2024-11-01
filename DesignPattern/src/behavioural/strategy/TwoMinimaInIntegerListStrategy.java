@@ -2,20 +2,18 @@ package behavioural.strategy;
 
 import java.util.List;
 
-import behavioural.strategy.base.AbstractStrategySearchMinimum;
+import behavioural.strategy.base.AbstractStrategySearchMinima;
 
 /**
  * Search two minimum values smaller than the reference element.
  */
-class TwoMinimaInIntegerListStrategy extends AbstractStrategySearchMinimum<Integer> {
+class TwoMinimaInIntegerListStrategy extends AbstractStrategySearchMinima<Integer> {
 
-    private Integer minimum1;
-    private Integer minimum2;
+    private Integer minimum1 = Integer.MAX_VALUE;
+    private Integer minimum2 = Integer.MAX_VALUE;
 
     @Override
-    public boolean searchMinimum(List<Integer> list, Integer element) {
-        minimum1 = Integer.MAX_VALUE;
-        minimum2 = Integer.MAX_VALUE;
+    public boolean searchMinima(List<Integer> list, Integer element) {
         if (list == null || list.isEmpty()) {
             return false;
         }
@@ -33,7 +31,7 @@ class TwoMinimaInIntegerListStrategy extends AbstractStrategySearchMinimum<Integ
      * Returns the minimum found values.
      */
     @Override
-    public List<Integer> getMinimum() {
+    public List<Integer> getMinima() {
         return List.of(minimum1, minimum2);
     }
 }

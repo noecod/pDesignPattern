@@ -9,7 +9,7 @@ public class FindInList extends AbstractStrategySolution<String> {
     private String searchElement;
 
     @Override
-    public boolean findSolution(List<String> list, String element) {
+    public boolean findSolutions(List<String> list, String element) {
         searchElement = element;
         if (element == null) {
             return false;
@@ -19,7 +19,7 @@ public class FindInList extends AbstractStrategySolution<String> {
     }
 
     @Override
-    public List<String> getSolution() {
+    public List<String> getSolutions() {
         return List.of(searchElement);
     }
 }

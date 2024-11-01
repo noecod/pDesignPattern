@@ -7,5 +7,12 @@ import java.util.List;
  */
 public interface IStrategy<T> {
 
+    /**
+     * Solver strategy for a list and a reference element
+     *
+     * @param list    input list
+     * @param element reference element
+     * @return one or more solutions
+     */
     List<T> solve(List<T> list, T element);
 }

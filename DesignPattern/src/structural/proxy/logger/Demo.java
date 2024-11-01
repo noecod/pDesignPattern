@@ -1,7 +1,5 @@
 package structural.proxy.logger;
 
-import java.time.Instant;
-
 public class Demo {
 
     public static void main(String[] args) {
