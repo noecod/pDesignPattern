@@ -18,7 +18,7 @@ public class TotalAmountVisitor implements ICartVisitor {
     @Override
     public void visit(CartItem item) {
         totalAmount = totalAmount + item.getQuantity() * item.getArticle().getPrice();
-        System.out.println("Add article " + item.getArticle().getDescription() + " with quantity " +
+        System.out.println("Add article '" + item.getArticle().getDescription() + "' with quantity " +
                            item.getQuantity() + " and price " + item.getArticle().getPrice() +
                            " => partial amount: " + totalAmount);
     }
